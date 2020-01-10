@@ -1,0 +1,12 @@
+{
+  "name": "epub-gen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "epub-gen": "^0.1.0",
+    "jsdom": "^15.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}
