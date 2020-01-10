@@ -3,11 +3,15 @@ const path = require('path')
 const css = require('./styles')
 const { generateBook } = require('./book-generator')
 
-const main = async () => {
-    const website = process.argv[2]
-    if (!website) {
-        console.log('Please provide a url')
-    }
+/**
+ * main
+ *
+ * @param url
+ * @param options
+ * @returns void
+ */
+async function main(url, options) {
+    const { content, ...config } = options
     const chapters = await generateBook(website)
     const option = {
         title: ' A Foundation Course in Reading German ',
@@ -15,6 +19,7 @@ const main = async () => {
             'Howard Martin, revised and expanded as an open online textbook by Alan Ng',
         publisher: 'University of Wisconsin',
         css,
+        ...config,
         content: chapters,
     }
     const dir = path.resolve(process.cwd())
@@ -22,4 +27,4 @@ const main = async () => {
     new Epub(option, dir + '/hello.epub')
 }
 
-main()
+module.exports = { main }

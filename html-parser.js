@@ -1,14 +1,27 @@
 const { JSDOM } = require('jsdom')
 const fetch = require('node-fetch')
 
-const getDom = async url => {
+/**
+ * getDom
+ *
+ * @param url
+ * @returns Promise<JSDOM>
+ */
+async function getDom(url) {
     const response = await fetch(url)
     const html = await response.text()
     const dom = new JSDOM(html)
     return dom
 }
 
-const getArticle = (dom, context) => {
+/**
+ * getArticle
+ *
+ * @param dom
+ * @param context
+ * @returns JSDOM object
+ */
+function getArticle(dom, context) {
     const {
         window: { document },
     } = dom
@@ -22,11 +35,25 @@ const getArticle = (dom, context) => {
     return new JSDOM(article.outerHTML)
 }
 
-const getHTML = (dom, context) => {
+/**
+ * getHTML
+ *
+ * @param dom
+ * @param context
+ * @returns string
+ */
+function getHTML(dom, context) {
     return dom.window.document.documentElement.outerHTML
 }
 
-const getTitle = (dom, context) => {
+/**
+ * getTitle
+ *
+ * @param dom
+ * @param context
+ * @returns string
+ */
+function getTitle(dom, context) {
     const {
         window: { document },
     } = dom
@@ -38,7 +65,14 @@ const getTitle = (dom, context) => {
     return titleElement.innerHTML
 }
 
-const removeTitle = (dom, context) => {
+/**
+ * removeTitle
+ *
+ * @param dom
+ * @param context
+ * @returns JSDOM object
+ */
+function removeTitle(dom, context) {
     const {
         window: { document },
     } = dom
@@ -50,7 +84,14 @@ const removeTitle = (dom, context) => {
     return dom
 }
 
-const getMain = (dom, context) => {
+/**
+ * getMain
+ *
+ * @param dom
+ * @param context
+ * @returns JSDOM object
+ */
+function getMain(dom, context) {
     const {
         window: { document },
     } = dom

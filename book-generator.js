@@ -6,11 +6,13 @@ const {
     getHTML,
     removeTitle,
 } = require('./html-parser')
+
 const { getNextPageLink } = require('./paginator')
 const { stripNbsp, stripSpan } = require('./stripper')
 const { fold } = require('./util/array')
 
 const generateBook = async (url, chapters = []) => {
+    if (!url) return chapters
     const dom = await getDom(url)
     const main = getMain(dom, {
         url,
@@ -24,7 +26,6 @@ const generateBook = async (url, chapters = []) => {
         .map(removeTitle)
         .map(getHTML)
     const nextPageLink = await getNextPageLink(main)
-    if (!nextPageLink) return chapters
     return await generateBook(
         nextPageLink,
         chapters.concat([
