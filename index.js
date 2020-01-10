@@ -10,9 +10,9 @@ const { generateBook } = require('./book-generator')
  * @param options
  * @returns void
  */
-async function main(url, options) {
+async function main(url, options = {}) {
     const { content, ...config } = options
-    const chapters = await generateBook(website)
+    const chapters = await generateBook(url)
     const option = {
         title: ' A Foundation Course in Reading German ',
         author:
@@ -24,7 +24,7 @@ async function main(url, options) {
     }
     const dir = path.resolve(process.cwd())
 
-    new Epub(option, dir + '/hello.epub')
+    new Epub(option, dir + '/dist/hello.epub')
 }
 
 module.exports = { main }
