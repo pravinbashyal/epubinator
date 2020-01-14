@@ -1,5 +1,6 @@
 const { JSDOM } = require('jsdom')
 const fetch = require('node-fetch')
+const { getDocument } = require('./util/jsdom')
 
 /**
  * getDom
@@ -22,10 +23,9 @@ async function getDom(url) {
  * @returns JSDOM object
  */
 function getArticle(dom, context) {
-    const {
-        window: { document },
-    } = dom
-    const article = document.querySelector('article')
+    const document = getDocument(dom)
+    const article =
+        document.querySelector('article') || document.querySelector('body')
     if (!article) {
         throw new Error(
             'cannot find article. describe the article explicitly',
@@ -35,6 +35,13 @@ function getArticle(dom, context) {
     return new JSDOM(article.outerHTML)
 }
 
+function removeToc(dom, context) {
+    const document = getDocument(dom)
+    const toc = document.querySelector('#toc')
+    if (toc) toc.remove()
+    return new JSDOM(document.documentElement.outerHTML)
+}
+
 /**
  * getHTML
  *
@@ -42,8 +49,8 @@ function getArticle(dom, context) {
  * @param context
  * @returns string
  */
-function getHTML(dom, context) {
-    return dom.window.document.documentElement.outerHTML
+function getBodyHtmlFromDom(dom, context) {
+    return dom.window.document.querySelector('body').innerHTML
 }
 
 /**
@@ -54,9 +61,7 @@ function getHTML(dom, context) {
  * @returns string
  */
 function getTitle(dom, context) {
-    const {
-        window: { document },
-    } = dom
+    const document = getDocument(dom)
     const titleElement = dom.window.document.querySelector('h1')
     if (!titleElement) {
         console.log(`cannot find title at ${context.url}`)
@@ -73,9 +78,7 @@ function getTitle(dom, context) {
  * @returns JSDOM object
  */
 function removeTitle(dom, context) {
-    const {
-        window: { document },
-    } = dom
+    const document = getDocument(dom)
     const titleElement = document.querySelector('h1')
     if (!titleElement) {
         return dom
@@ -92,12 +95,12 @@ function removeTitle(dom, context) {
  * @returns JSDOM object
  */
 function getMain(dom, context) {
-    const {
-        window: { document },
-    } = dom
+    const document = getDocument(dom)
     const main =
         document.querySelector('main') ||
-        document.querySelector("[role='main']")
+        document.querySelector("[role='main']") ||
+        document.querySelector('#main') ||
+        document.querySelector('body')
     if (!main) {
         throw new Error(
             `cannot find main. describe the main explicitly at ${context.url} ${dom.innerHTML}`,
@@ -107,4 +110,12 @@ function getMain(dom, context) {
     return new JSDOM(main.outerHTML)
 }
 
-module.exports = { getArticle, getDom, getMain, getHTML, getTitle, removeTitle }
+module.exports = {
+    getArticle,
+    getDom,
+    getMain,
+    getBodyHtmlFromDom,
+    getTitle,
+    removeTitle,
+    removeToc,
+}

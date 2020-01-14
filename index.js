@@ -1,7 +1,10 @@
+const fs = require('fs')
 const Epub = require('epub-gen')
 const path = require('path')
 const css = require('./styles')
-const { generateBook } = require('./book-generator')
+const { generateBook, generateSinglePageBook } = require('./book-generator')
+const html = fs.readFileSync('./test.html', { encoding: 'utf-8' })
+const { JSDOM } = require('jsdom')
 
 /**
  * main
@@ -12,19 +15,18 @@ const { generateBook } = require('./book-generator')
  */
 async function main(url, options = {}) {
     const { content, ...config } = options
-    const chapters = await generateBook(url)
+    // const chapters = await generateBook(url)
+    const book = await generateSinglePageBook(url)
     const option = {
-        title: ' A Foundation Course in Reading German ',
-        author:
-            'Howard Martin, revised and expanded as an open online textbook by Alan Ng',
-        publisher: 'University of Wisconsin',
+        author: '',
+        publisher: '',
         css,
         ...config,
-        content: chapters,
+        ...book,
     }
     const dir = path.resolve(process.cwd())
 
-    new Epub(option, dir + '/dist/hello.epub')
+    new Epub(option, dir + `/dist/${book.title}.epub`)
 }
 
 module.exports = { main }

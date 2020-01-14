@@ -3,13 +3,17 @@ const {
     getMain,
     getArticle,
     getTitle,
-    getHTML,
+    getBodyHtmlFromDom,
     removeTitle,
+    removeToc,
 } = require('./html-parser')
+const { getDocument } = require('./util/jsdom')
+const { concat } = require('ramda')
 
 const { getNextPageLink } = require('./paginator')
 const { stripNbsp, stripSpan } = require('./stripper')
-const { fold } = require('./util/array')
+const { fold, log } = require('./util/array')
+const { JSDOM } = require('jsdom')
 
 const generateBook = async (url, chapters = []) => {
     if (!url) return chapters
@@ -24,7 +28,7 @@ const generateBook = async (url, chapters = []) => {
     const article = [main]
         .map(getArticle)
         .map(removeTitle)
-        .map(getHTML)
+        .map(getBodyHtmlFromDom)
     const nextPageLink = await getNextPageLink(main)
     return await generateBook(
         nextPageLink,
@@ -36,5 +40,40 @@ const generateBook = async (url, chapters = []) => {
         ])
     )
 }
+const generateSinglePageBook = async url => {
+    if (!url) return chapters
+    const dom = await getDom(url)
+    const main = getMain(dom, {
+        url,
+    })
+    const title = [main]
+        .map(getTitle)
+        .map(stripNbsp)
+        .map(stripSpan)
+    const toc = [generateToc(main, { id: 'toc' })].map(getBodyHtmlFromDom)
+    const article = [main]
+        .map(getArticle)
+        .map(removeToc)
+        .map(removeTitle)
+        .map(getBodyHtmlFromDom)
+    // TODO: could be antipattern, review
+    const data = article.map(concat(fold(toc)))
+    return {
+        title,
+        content: [
+            {
+                data: fold(data),
+            },
+        ],
+    }
+}
 
-module.exports = { generateBook }
+// TODO write specific function
+function generateToc(dom, context) {
+    const document = getDocument(dom)
+    const tableOfContent = document.querySelector(`#${context.id}`)
+    if (!tableOfContent) return
+    return new JSDOM(tableOfContent.outerHTML)
+}
+
+module.exports = { generateBook, generateSinglePageBook }
