@@ -4,10 +4,8 @@ const stripNbsp = html => {
 }
 
 const stripSpan = html => {
-    // TODO: make one regex
-    const spanOpen = /<span>/gi
-    const spanClose = /<\/span>/gi
-    return html.replace(spanOpen, '').replace(spanClose, '')
+    const spanRegex = /<\s*span[^>]*>|<\/\s*span[^>]*>/gi
+    return html.replace(spanRegex, '')
 }
 
 module.exports = { stripNbsp, stripSpan }

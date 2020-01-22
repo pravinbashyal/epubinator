@@ -9,5 +9,8 @@
     "jsdom": "^15.2.1",
     "node-fetch": "^2.6.0",
     "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "getopts": "^2.2.5"
   }
 }

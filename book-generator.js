@@ -15,7 +15,7 @@ const { stripNbsp, stripSpan } = require('./stripper')
 const { fold, log } = require('./util/array')
 const { JSDOM } = require('jsdom')
 
-const generateBook = async (url, chapters = []) => {
+const generateBookChapters = async (url, chapters = []) => {
     if (!url) return chapters
     const dom = await getDom(url)
     const main = getMain(dom, {
@@ -30,7 +30,7 @@ const generateBook = async (url, chapters = []) => {
         .map(removeTitle)
         .map(getBodyHtmlFromDom)
     const nextPageLink = await getNextPageLink(main)
-    return await generateBook(
+    return await generateBookChapters(
         nextPageLink,
         chapters.concat([
             {
@@ -40,6 +40,7 @@ const generateBook = async (url, chapters = []) => {
         ])
     )
 }
+
 const generateSinglePageBook = async url => {
     if (!url) return chapters
     const dom = await getDom(url)
@@ -76,4 +77,4 @@ function generateToc(dom, context) {
     return new JSDOM(tableOfContent.outerHTML)
 }
 
-module.exports = { generateBook, generateSinglePageBook }
+module.exports = { generateBookChapters, generateSinglePageBook }
