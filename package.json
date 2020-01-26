@@ -1,5 +1,5 @@
 {
-    "name": "epub-gen",
+    "name": "epubinator",
     "version": "0.0.0-pre-alpha",
     "main": "index.js",
     "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
