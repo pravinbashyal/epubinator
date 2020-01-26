@@ -1,16 +1,17 @@
 {
-  "name": "epub-gen",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "epub-gen": "^0.1.0",
-    "jsdom": "^15.2.1",
-    "node-fetch": "^2.6.0",
-    "ramda": "^0.26.1"
-  },
-  "devDependencies": {
-    "getopts": "^2.2.5"
-  }
+    "name": "epub-gen",
+    "version": "0.0.0-pre-alpha",
+    "main": "index.js",
+    "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
+    "license": "MIT",
+    "bin": "./bin/index.js",
+    "dependencies": {
+        "epub-gen": "^0.1.0",
+        "jsdom": "^15.2.1",
+        "node-fetch": "^2.6.0",
+        "ramda": "^0.26.1"
+    },
+    "devDependencies": {
+        "getopts": "^2.2.5"
+    }
 }
