@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const { main } = require('../src/index.js')
-const getopts = require('getopts')
+import { main } from '../main'
+import getopts from 'getopts'
 
 const options = getopts(process.argv.slice(2), {
   alias: {

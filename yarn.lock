@@ -137,6 +137,13 @@
   resolved "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
+"@types/getopts@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/@types/getopts/-/getopts-2.1.0.tgz#f2c7423b25c8e8d12326cd8c389ff9ec6fc51e79"
+  integrity sha512-vtBNfAZ2Vyz8aZapXTVjJPVty9gIg5G0As5yyiuPuxmxKtTswuc6mtS8XdWgtFMDJ/SPF84JorR5iY8GU52HGw==
+  dependencies:
+    getopts "*"
+
 "@types/jsdom@^12.2.4":
   version "12.2.4"
   resolved "https://registry.npmjs.org/@types/jsdom/-/jsdom-12.2.4.tgz#845cd4d43f95b8406d9b724ec30c03edadcd9528"
@@ -1481,7 +1488,7 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-getopts@^2.2.5:
+getopts@*, getopts@^2.2.5:
   version "2.2.5"
   resolved "https://registry.npmjs.org/getopts/-/getopts-2.2.5.tgz#67a0fe471cacb9c687d817cab6450b96dde8313b"
   integrity sha512-9jb7AW5p3in+IiJWhQiZmmwkpLaR/ccTWdWQCtZM66HJcHHLegowh4q4tSD7gouUyeNvFWRavfK9GXosQHDpFA==

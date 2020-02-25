@@ -10,7 +10,8 @@
     "importHelpers": true,
     "downlevelIteration": true,
     "lib": ["es2015", "es6", "dom", "es7", "es2017", "esnext.asynciterable"],
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "outDir": "./build/"
   },
   "exclude": ["node_modules", "dist"],
   "include": ["./src/**/*"]
