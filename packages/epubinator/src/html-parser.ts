@@ -2,6 +2,7 @@ import fetch from 'node-fetch'
 import { JSDOM } from 'jsdom'
 import { ContextType } from './models/ContextType'
 import { getDocument } from './util/jsdom'
+import { log, info, boldInfo, success, lineBreak } from './logger'
 
 /**
  * getDom
@@ -9,7 +10,7 @@ import { getDocument } from './util/jsdom'
  * @param url
  * @returns Promise<JSDOM>
  */
-async function getDom(url: string): Promise<JSDOM> {
+export async function getDom(url: string): Promise<JSDOM> {
   const response = await fetch(url)
   const html = await response.text()
   const dom = new JSDOM(html)
@@ -23,7 +24,7 @@ async function getDom(url: string): Promise<JSDOM> {
  * @param context
  * @returns JSDOM object
  */
-function getArticle(dom: JSDOM, context: ContextType = {}): JSDOM {
+export function getArticle(dom: JSDOM, context: ContextType = {}): JSDOM {
   const document = getDocument(dom)
   const article =
     document.querySelector('article') || document.querySelector('body')
@@ -37,7 +38,7 @@ function getArticle(dom: JSDOM, context: ContextType = {}): JSDOM {
   return new JSDOM(article.outerHTML)
 }
 
-function removeToc(dom: JSDOM): JSDOM {
+export function removeToc(dom: JSDOM): JSDOM {
   const document = getDocument(dom)
   const toc = document.querySelector('#toc')
   if (toc) toc.remove()
@@ -50,7 +51,7 @@ function removeToc(dom: JSDOM): JSDOM {
  * @param {JSDOM} dom
  * @returns {string}
  */
-function getBodyHtmlFromDom(dom: JSDOM): string {
+export function getBodyHtmlFromDom(dom: JSDOM): string {
   if (!dom) return ''
   return dom.window.document.querySelector('body').innerHTML
 }
@@ -62,12 +63,12 @@ function getBodyHtmlFromDom(dom: JSDOM): string {
  * @param {ContextType} context={}
  * @returns {string}
  */
-function getTitle(dom: JSDOM, context: ContextType = {}): string | undefined {
+export function getTitle(dom: JSDOM, context: ContextType = {}): string {
   const document = getDocument(dom)
   const titleElement = document.querySelector('h1')
   if (!titleElement) {
     console.log(`cannot find title at ${context.url}`)
-    return undefined
+    return ''
   }
   return titleElement.innerHTML
 }
@@ -78,7 +79,7 @@ function getTitle(dom: JSDOM, context: ContextType = {}): string | undefined {
  * @param {JSDOM} dom
  * @returns {JSDOM}
  */
-function removeTitle(dom: JSDOM): JSDOM {
+export function removeTitle(dom: JSDOM): JSDOM {
   // TODO: immutability
   const document = getDocument(dom)
   const titleElement = document.querySelector('h1')
@@ -101,7 +102,7 @@ function getFallbackTitleContent(dom: JSDOM): HTMLElement {
  * @param {ContextType} context={}
  * @returns {JSDOM}
  */
-function getMain(dom: JSDOM, context: ContextType = {}): JSDOM {
+export function getMain(dom: JSDOM, context: ContextType = {}): JSDOM {
   const document = getDocument(dom)
   const fallbackTitleContent = getFallbackTitleContent(dom)
   const main =
@@ -119,12 +120,44 @@ function getMain(dom: JSDOM, context: ContextType = {}): JSDOM {
   return new JSDOM(main.outerHTML)
 }
 
-export {
-  getArticle,
-  getDom,
-  getMain,
-  getBodyHtmlFromDom,
-  getTitle,
-  removeTitle,
-  removeToc,
+/**
+ * generateLink
+ *
+ * @param {string} origin
+ * @param {string} link
+ * @returns {string}
+ */
+export function generateLink(originUrl: URL, link: string): string | undefined {
+  if (!link) return
+  log(
+    info('Generating link at'),
+    success('origin:'),
+    boldInfo(originUrl.origin),
+    lineBreak,
+    success('link:'),
+    boldInfo(link)
+  )
+  try {
+    new URL(link)
+    return link
+  } catch (e) {
+    if (isAbsoluteHref(link)) {
+      return `${originUrl.origin}/${link}`
+    }
+    return `${stripCurrentPageFromUrl(originUrl.href)}/${link}`
+  }
+}
+
+const stripCurrentPageFromUrl = (url: string) => {
+  return (
+    url
+      // .replace(/(^\w+:|^)\/\//, '')
+      .split('/')
+      .slice(0, -1)
+      .join('/')
+  )
+}
+
+const isAbsoluteHref = (link: string): boolean => {
+  return link && link[0] === '/'
 }

@@ -1,4 +1,4 @@
-import { compose, either } from 'ramda'
+import { compose } from 'ramda'
 import {
   getDom,
   getMain,
@@ -7,28 +7,32 @@ import {
   removeTitle,
   getBodyHtmlFromDom,
   removeToc,
+  generateLink,
 } from './html-parser'
-import { stripNbsp, stripSpan } from './stripper'
+import { stripNbsp, stripHtmlAttributes } from './stripper'
 import { getNextPageLink } from './paginator'
 import { JSDOM } from 'jsdom'
 import { getDocument } from './util/jsdom'
 import { ContextType } from './models/ContextType'
 import { ChapterType } from './models/BookType'
+import { log, info, emphasize } from './logger'
 
 const generateBookChapters = async (
   url: string,
   chapters: ChapterType[] = []
 ): Promise<ChapterType[] | typeof generateBookChapters> => {
   if (!url) return chapters
+  log(info('Downloading page for'), compose(info, emphasize)(url))
+  const urlInstance = new URL(url)
   const dom = await getDom(url)
   const main = getMain(dom, {
     url,
   })
-  const title = compose(stripNbsp, stripSpan)(getTitle(main))
+  const title = compose(stripNbsp, stripHtmlAttributes)(getTitle(main))
   const article = getBodyHtmlFromDom(compose(getArticle, removeTitle)(main))
-  const nextPageLink = await getNextPageLink(main)
+  const nextPageHref = await getNextPageLink(dom)
   return await generateBookChapters(
-    nextPageLink,
+    generateLink(urlInstance, nextPageHref),
     chapters.concat([
       {
         title: title,
@@ -50,7 +54,7 @@ const generateSinglePageBook = async (url: string) => {
   )
   const data = toc.concat(article)
   return {
-    title: title && compose(stripNbsp, stripSpan)(title),
+    title: title && compose(stripNbsp, stripHtmlAttributes)(title),
     content: [
       {
         data: data,
@@ -68,3 +72,4 @@ function generateToc(dom: JSDOM, context: ContextType = {}) {
 }
 
 export { generateBookChapters, generateSinglePageBook }
+

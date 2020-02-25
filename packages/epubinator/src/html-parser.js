@@ -4,6 +4,7 @@ var tslib_1 = require("tslib");
 var node_fetch_1 = require("node-fetch");
 var jsdom_1 = require("jsdom");
 var jsdom_2 = require("./util/jsdom");
+var logger_1 = require("./logger");
 /**
  * getDom
  *
@@ -78,7 +79,7 @@ function getTitle(dom, context) {
     var titleElement = document.querySelector('h1');
     if (!titleElement) {
         console.log("cannot find title at " + context.url);
-        return undefined;
+        return '';
     }
     return titleElement.innerHTML;
 }
@@ -127,3 +128,36 @@ function getMain(dom, context) {
     return new jsdom_1.JSDOM(main.outerHTML);
 }
 exports.getMain = getMain;
+/**
+ * generateLink
+ *
+ * @param {string} origin
+ * @param {string} link
+ * @returns {string}
+ */
+function generateLink(originUrl, link) {
+    if (!link)
+        return;
+    logger_1.log(logger_1.info('Generating link at'), logger_1.success('origin:'), logger_1.boldInfo(originUrl.origin), logger_1.lineBreak, logger_1.success('link:'), logger_1.boldInfo(link));
+    try {
+        new URL(link);
+        return link;
+    }
+    catch (e) {
+        if (isAbsoluteHref(link)) {
+            return originUrl.origin + "/" + link;
+        }
+        return stripCurrentPageFromUrl(originUrl.href) + "/" + link;
+    }
+}
+exports.generateLink = generateLink;
+var stripCurrentPageFromUrl = function (url) {
+    return (url
+        // .replace(/(^\w+:|^)\/\//, '')
+        .split('/')
+        .slice(0, -1)
+        .join('/'));
+};
+var isAbsoluteHref = function (link) {
+    return link && link[0] === '/';
+};

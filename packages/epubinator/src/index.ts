@@ -30,7 +30,6 @@ async function main(url: string, options: OptionsType = {}) {
     ...book,
     title: options.title,
   }
-  console.log(option)
   new Epub(option, __dirname + `/../dist/${option.title || 'output'}.epub`)
 }
 

@@ -17,8 +17,8 @@ exports.stripNbsp = stripNbsp;
  * @param {string} html
  * @returns {string}
  */
-function stripSpan(html) {
-    var spanRegex = /<\s*span[^>]*>|<\/\s*span[^>]*>/gi;
+function stripHtmlAttributes(html) {
+    var spanRegex = /<\s*[^>]*>|<\/\s*[^>]*>/gi;
     return html.replace(spanRegex, '');
 }
-exports.stripSpan = stripSpan;
+exports.stripHtmlAttributes = stripHtmlAttributes;

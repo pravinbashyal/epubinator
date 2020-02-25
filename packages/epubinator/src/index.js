@@ -32,7 +32,6 @@ function main(url, options) {
                     _a.label = 4;
                 case 4:
                     option = tslib_1.__assign(tslib_1.__assign(tslib_1.__assign({ author: '', publisher: '', css: styles_1.default }, config), book), { title: options.title });
-                    console.log(option);
                     new Epub(option, __dirname + ("/../dist/" + (option.title || 'output') + ".epub"));
                     return [2 /*return*/];
             }

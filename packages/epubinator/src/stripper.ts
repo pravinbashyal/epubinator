@@ -5,8 +5,8 @@
  * @returns {string}
  */
 function stripNbsp(html: string): string {
-    const nbspRegex = /&nbsp;/gi
-    return html.replace(nbspRegex, ' ')
+  const nbspRegex = /&nbsp;/gi
+  return html.replace(nbspRegex, ' ')
 }
 
 /**
@@ -15,9 +15,9 @@ function stripNbsp(html: string): string {
  * @param {string} html
  * @returns {string}
  */
-function stripSpan(html: string): string {
-    const spanRegex = /<\s*span[^>]*>|<\/\s*span[^>]*>/gi
-    return html.replace(spanRegex, '')
+function stripHtmlAttributes(html: string): string {
+  const spanRegex = /<\s*[^>]*>|<\/\s*[^>]*>/gi
+  return html.replace(spanRegex, '')
 }
 
-export { stripNbsp, stripSpan }
+export { stripNbsp, stripHtmlAttributes }
