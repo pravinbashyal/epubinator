@@ -1,0 +1,37 @@
+{
+  "name": "epubinator",
+  "version": "0.0.1-pre-alpha",
+  "main": "./build/index.js",
+  "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
+  "license": "MIT",
+  "bin": "./build/bin/index.js",
+  "scripts": {
+    "build:watch": "cp -r src/textfiles build/ && tsc -w"
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/getopts": "^2.1.0",
+    "@types/mozilla-readability": "^0.1.4",
+    "chalk": "^3.0.0",
+    "epub-gen": "^0.1.0",
+    "jsdom": "^15.2.1",
+    "node-fetch": "^2.6.0",
+    "oclif": "^1.15.2",
+    "ramda": "^0.26.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 80
+  },
+  "devDependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node-fetch": "^2.5.4",
+    "@types/ramda": "^0.26.40",
+    "getopts": "^2.2.5",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
+}
