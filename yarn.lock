@@ -153,6 +153,11 @@
     "@types/tough-cookie" "*"
     parse5 "^4.0.0"
 
+"@types/mozilla-readability@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@types/mozilla-readability/-/mozilla-readability-0.1.4.tgz#2c8f042ee25e4480f18cbd474f01c6f96049043e"
+  integrity sha512-YOoxlAUc7iD/1S01fye0xmPpu1nUKb5LTMLZVv+VgAByhEwGuwXLhM9AUnEUtWSPQL7sFH0GBv8NuFcEXcN4Nw==
+
 "@types/node-fetch@^2.5.4":
   version "2.5.4"
   resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.5.4.tgz#5245b6d8841fc3a6208b82291119bc11c4e0ce44"
@@ -2985,6 +2990,10 @@ read-pkg@^3.0.0:
     load-json-file "^4.0.0"
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
+
+"readability@https://github.com/mozilla/readability":
+  version "0.2.0"
+  resolved "https://github.com/mozilla/readability#d6fc38c4b45d9bc337e3579b53ffa7c188cc4d77"
 
 "readable-stream@2 || 3", readable-stream@^3.0.1, readable-stream@^3.1.1, readable-stream@^3.4.0:
   version "3.5.0"
