@@ -16,6 +16,8 @@ import { getDocument } from './util/jsdom'
 import { ContextType } from './models/ContextType'
 import { ChapterType } from './models/BookType'
 import { log, info, emphasizedInfo } from './logger'
+import { ParseResult } from 'mozilla-readability'
+import { getReadableArticle } from 'readability-parser'
 
 type GenerateBookChapterFunction = (
   url: string,
@@ -30,18 +32,14 @@ export const generateBookChapters: GenerateBookChapterFunction = async (
   log(info('Downloading page for'), emphasizedInfo(url))
   const urlInstance = new URL(url)
   const dom = await getDom(url)
-  const main = getMain(dom, {
-    url,
-  })
-  const title = compose(stripNbsp, stripHtmlAttributes)(getTitle(main))
-  const article = getBodyHtmlFromDom(compose(getArticle, removeTitle)(main))
+  const readableArticle: ParseResult = getReadableArticle(dom)
   const nextPageHref = await getNextPageLink(dom)
   return await generateBookChapters(
     generateLink(urlInstance, nextPageHref),
     chapters.concat([
       {
-        title: title,
-        data: article,
+        title: readableArticle.title,
+        data: readableArticle.content,
       },
     ])
   )
