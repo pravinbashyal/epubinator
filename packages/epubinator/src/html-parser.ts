@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import { JSDOM } from 'jsdom'
 import { ContextType } from './models/ContextType'
 import { getDocument } from './util/jsdom'
-import { log, info, boldInfo, success, lineBreak } from './logger'
+import { log, info, success, lineBreak, emphasizedInfo } from './logger'
 
 /**
  * getDom
@@ -132,10 +132,10 @@ export function generateLink(originUrl: URL, link: string): string | undefined {
   log(
     info('Generating link at'),
     success('origin:'),
-    boldInfo(originUrl.origin),
+    emphasizedInfo(originUrl.origin),
     lineBreak,
     success('link:'),
-    boldInfo(link)
+    emphasizedInfo(link)
   )
   try {
     new URL(link)

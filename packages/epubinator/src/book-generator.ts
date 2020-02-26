@@ -15,14 +15,19 @@ import { JSDOM } from 'jsdom'
 import { getDocument } from './util/jsdom'
 import { ContextType } from './models/ContextType'
 import { ChapterType } from './models/BookType'
-import { log, info, emphasize } from './logger'
+import { log, info, emphasizedInfo } from './logger'
 
-const generateBookChapters = async (
+type GenerateBookChapterFunction = (
+  url: string,
+  chapters?: ChapterType[]
+) => Promise<ChapterType[] | GenerateBookChapterFunction>
+
+export const generateBookChapters: GenerateBookChapterFunction = async (
   url: string,
   chapters: ChapterType[] = []
-): Promise<ChapterType[] | typeof generateBookChapters> => {
+) => {
   if (!url) return chapters
-  log(info('Downloading page for'), compose(info, emphasize)(url))
+  log(info('Downloading page for'), emphasizedInfo(url))
   const urlInstance = new URL(url)
   const dom = await getDom(url)
   const main = getMain(dom, {
@@ -42,7 +47,7 @@ const generateBookChapters = async (
   )
 }
 
-const generateSinglePageBook = async (url: string) => {
+export const generateSinglePageBook = async (url: string) => {
   const dom = await getDom(url)
   const main = getMain(dom, {
     url,
@@ -70,6 +75,3 @@ function generateToc(dom: JSDOM, context: ContextType = {}) {
   if (!tableOfContent) return
   return new JSDOM(tableOfContent.outerHTML)
 }
-
-export { generateBookChapters, generateSinglePageBook }
-

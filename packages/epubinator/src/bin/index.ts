@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { main } from '../main'
-import getopts from 'getopts'
+import * as getopts from 'getopts'
 
 const options = getopts(process.argv.slice(2), {
   alias: {

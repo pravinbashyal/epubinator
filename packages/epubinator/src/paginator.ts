@@ -1,4 +1,5 @@
 import { JSDOM } from 'jsdom'
+import { ContextType } from './models/ContextType'
 
 const getNextPageLink = async (
   dom: JSDOM,

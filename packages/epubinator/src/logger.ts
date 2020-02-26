@@ -6,7 +6,7 @@ export const error = red
 export const success = green
 export const emphasize = bold
 export const lineBreak = '\n'
-export const log = (...args) => {
+export const log = (...args: string[]) => {
   console.log(args.join(' '))
 }
-export const boldInfo = compose(blue, emphasize)
+export const emphasizedInfo = blue.bold

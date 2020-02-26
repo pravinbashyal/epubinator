@@ -13,7 +13,7 @@ const Epub = require('epub-gen')
  * @param options
  * @returns void
  */
-async function main(url: string, options: OptionsType = {}) {
+async function main(url: string, options: Partial<OptionsType> = {}) {
   const { content, ...config } = options
   let book: Partial<BookType> = {}
   if (options.multiurl) {
