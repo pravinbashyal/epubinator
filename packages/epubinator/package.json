@@ -27,7 +27,7 @@
     "printWidth": 80
   },
   "devDependencies": {
-    "@types/jsdom": "^12.2.4",
+    "@types/jsdom": "^16.2.4",
     "@types/node-fetch": "^2.5.4",
     "@types/ramda": "^0.26.40",
     "getopts": "^2.2.5",
