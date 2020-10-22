@@ -153,6 +153,11 @@
     "@types/tough-cookie" "*"
     parse5 "^4.0.0"
 
+"@types/mozilla-readability@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@types/mozilla-readability/-/mozilla-readability-0.1.4.tgz#2c8f042ee25e4480f18cbd474f01c6f96049043e"
+  integrity sha512-YOoxlAUc7iD/1S01fye0xmPpu1nUKb5LTMLZVv+VgAByhEwGuwXLhM9AUnEUtWSPQL7sFH0GBv8NuFcEXcN4Nw==
+
 "@types/node-fetch@^2.5.4":
   version "2.5.4"
   resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.5.4.tgz#5245b6d8841fc3a6208b82291119bc11c4e0ce44"
@@ -196,9 +201,9 @@ acorn-walk@^6.0.1:
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
 acorn@^6.0.1:
-  version "6.4.0"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
-  integrity sha512-gac8OEcQ2Li1dxIEWGZzsp2BitJxwkwcOm0zHAJLcPJaVvm58FRnk6RkuLRpU1EujipU2ZFODv2P9DLMfnV8mw==
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
+  integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
 
 acorn@^7.1.0:
   version "7.1.0"
