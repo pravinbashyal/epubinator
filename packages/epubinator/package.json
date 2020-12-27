@@ -31,7 +31,7 @@
     "@types/node-fetch": "^2.5.4",
     "@types/ramda": "^0.27.34",
     "getopts": "^2.2.5",
-    "prettier": "^1.19.1",
+    "prettier": "^2.2.1",
     "typescript": "^3.7.5"
   }
 }
