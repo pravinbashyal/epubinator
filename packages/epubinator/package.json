@@ -15,8 +15,8 @@
     "@types/mozilla-readability": "^0.2.0",
     "epub-gen": "^0.1.0",
     "node-fetch": "^2.6.1",
+    "oclif": "^1.16.1",
     "jsdom": "^16.4.0",
-    "oclif": "^1.15.2",
     "ramda": "^0.26.1"
   },
   "prettier": {
