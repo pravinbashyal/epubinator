@@ -6,7 +6,8 @@
   "license": "MIT",
   "bin": "./build/bin/index.js",
   "scripts": {
-    "build:watch": "cp -r src/textfiles build/ && tsc -w"
+    "build:watch": "cp -r src/textfiles build/ && tsc -w",
+    "build": "tsc"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",

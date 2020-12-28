@@ -1,0 +1,13 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout:
+      - run:
+          name: "install"
+          command: yarn
+      - run:
+          name: "build"
+          command: cd packages/epubinator && yarn build
