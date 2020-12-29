@@ -9,8 +9,8 @@
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
     "build": "tsc",
     "in": "lerna init --independent",
-    "release:canary": "lerna version --conventional-commits --conventional-prerelease --preid=alpha",
-    "release": "lerna version --conventional-commits --preid=alpha"
+    "release:canary": "lerna version --conventional-commits --conventional-prerelease --preid=alpha --yes",
+    "release": "lerna version --conventional-commits --preid=alpha --yes"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
