@@ -44,9 +44,13 @@ workflows:
     jobs:
       - install
       - cache:
+          requires:
+            - install
           filters:
             tags:
               only: /^v.*/
             branches:
               ignore: /.*/
       - build
+          requires:
+            - install
