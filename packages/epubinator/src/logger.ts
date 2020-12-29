@@ -1,5 +1,4 @@
 import { blue, red, green, bold } from 'chalk'
-import { compose } from 'ramda'
 
 export const info = blue
 export const error = red
