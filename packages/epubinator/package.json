@@ -8,7 +8,7 @@
   "scripts": {
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
     "build": "tsc",
-    "release:canary": "lerna version --conventional-commits --conventional-prerelease",
+    "release:canary": "lerna version --conventional-commits --conventional-prerelease --yes",
     "lerna:init": "lerna init"
   },
   "dependencies": {
