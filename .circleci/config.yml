@@ -87,7 +87,7 @@ workflows:
               ignore:
                 - master
                 - /dependabot-npm_and_yarn-.*/
-      - prerelease:
+      - release:
           requires:
             - build
           filters:
