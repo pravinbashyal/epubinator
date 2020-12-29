@@ -8,17 +8,19 @@ const options = getopts(process.argv.slice(2), {
     multiurl: 'm',
     multipage: 'p',
     title: 't',
+    output: 'o'
   },
   default: {
     multiurl: false,
     multipage: true,
     default: '',
+    output: './'
   },
 })
 
 const printUsage = () => {
   console.log(
-    'usage: epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] url'
+    'usage: epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] url'
   )
   process.exit(0)
 }
@@ -29,11 +31,11 @@ if (options.help) {
 
 const website = options['_'][0]
 
-const { multiurl, multipage, title } = options
+const { multiurl, multipage, title, output } = options
 
 if (!website) {
   console.log('missing url \n')
   printUsage()
 }
 
-main(website, { multiurl, multipage, title: title || website })
+main(website, { multiurl, multipage, title: title || website, output : output ||  process.cwd() })

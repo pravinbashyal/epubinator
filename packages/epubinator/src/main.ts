@@ -29,8 +29,9 @@ async function main(url: string, options: Partial<OptionsType> = {}) {
     ...config,
     ...book,
     title: options.title,
+    verbose: true,
   }
-  new Epub(option, __dirname + `/../dist/${option.title || 'output'}.epub`)
+  new Epub(option, option.output + `${option.title || 'output'}.epub`)
 }
 
 export { main }

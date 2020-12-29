@@ -2,7 +2,9 @@ import fetch from 'node-fetch'
 import { JSDOM } from 'jsdom'
 import { ContextType } from './models/ContextType'
 import { getDocument } from './util/jsdom'
-import { log, info, success, lineBreak, emphasizedInfo } from './logger'
+import { log, info, success, lineBreak, emphasizedInfo, error } from './logger'
+import { absoluteToLink, isAbsoluteHref, origin } from './url'
+import { compose } from 'ramda'
 
 /**
  * getDom
@@ -14,7 +16,45 @@ export async function getDom(url: string): Promise<JSDOM> {
   const response = await fetch(url)
   const html = await response.text()
   const dom = new JSDOM(html)
+  const pictures = Array.from(
+    dom.window.document.documentElement.querySelectorAll('picture')
+  )
+  replacePicturesWithImages(pictures)
+  const images = Array.from(
+    dom.window.document.documentElement.querySelectorAll('img')
+  )
+  compose(
+    withoutAttributes(['srcset', 'loading']),
+    linkImgSrcToCompleteLink(url)
+  )(images)
+  removeSvgImg(images)
   return dom
+}
+
+const removeSvgImg = (images: HTMLImageElement[]) => {
+  images.forEach(
+    (image) => /data:image\/svg/i.test(image.src) && image.remove()
+  )
+}
+
+const replacePicturesWithImages = (pictures: HTMLPictureElement[]) => {
+  pictures.forEach((picture) => {
+    const image = picture.querySelector('img')
+    const parentNode = picture.parentNode
+    parentNode.insertBefore(image.cloneNode(true), picture)
+    picture.remove()
+  })
+}
+
+const withoutAttributes = (attributes: string[]) => (
+  images: HTMLImageElement[]
+) => {
+  const removeFrom = (image: HTMLImageElement) => (attribute: string) =>
+    image.removeAttribute(attribute)
+  images.forEach((image) => {
+    attributes.forEach(removeFrom(image))
+  })
+  return images
 }
 
 /**
@@ -40,7 +80,7 @@ export function getArticle(dom: JSDOM, context: ContextType = {}): JSDOM {
 
 export function removeToc(dom: JSDOM): JSDOM {
   const document = getDocument(dom)
-  const toc = document.querySelector('#toc')
+  const toc = document.querySelector('#toc') || document.querySelector('aside')
   if (toc) toc.remove()
   return new JSDOM(document.documentElement.outerHTML)
 }
@@ -91,8 +131,9 @@ export function removeTitle(dom: JSDOM): JSDOM {
 }
 
 function getFallbackTitleContent(dom: JSDOM): HTMLElement {
-  const title = getDocument(dom).querySelector('h1')
-  return title.parentElement
+  const title =
+    getDocument(dom).querySelector('h1') || getDocument(dom).querySelector('h2')
+  return title?.parentElement
 }
 
 /**
@@ -120,6 +161,18 @@ export function getMain(dom: JSDOM, context: ContextType = {}): JSDOM {
   return new JSDOM(main.outerHTML)
 }
 
+const linkImgSrcToCompleteLink = (url: string) => (
+  images: HTMLImageElement[]
+): HTMLImageElement[] => {
+  Array.from(images).forEach((image) => {
+    if (isAbsoluteHref(image.src)) {
+      image.src = absoluteToLink({ url })(image.src)
+    }
+    return image
+  })
+  return images
+}
+
 /**
  * generateLink
  *
@@ -127,24 +180,25 @@ export function getMain(dom: JSDOM, context: ContextType = {}): JSDOM {
  * @param {string} link
  * @returns {string}
  */
-export function generateLink(originUrl: URL, link: string): string | undefined {
+export function generateLink(url: string, link: string): string | undefined {
   if (!link) return
   log(
     info('Generating link at'),
     success('origin:'),
-    emphasizedInfo(originUrl.origin),
+    emphasizedInfo(origin(url)),
     lineBreak,
     success('link:'),
     emphasizedInfo(link)
   )
+  log(error(url))
   try {
     new URL(link)
     return link
   } catch (e) {
     if (isAbsoluteHref(link)) {
-      return `${originUrl.origin}/${link}`
+      return absoluteToLink({ url })(link)
     }
-    return `${stripCurrentPageFromUrl(originUrl.href)}/${link}`
+    return `${stripCurrentPageFromUrl(url)}/${link}`
   }
 }
 
@@ -156,8 +210,4 @@ const stripCurrentPageFromUrl = (url: string) => {
       .slice(0, -1)
       .join('/')
   )
-}
-
-const isAbsoluteHref = (link: string): boolean => {
-  return link && link[0] === '/'
 }

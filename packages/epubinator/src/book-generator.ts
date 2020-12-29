@@ -28,7 +28,6 @@ export const generateBookChapters: GenerateBookChapterFunction = async (
 ) => {
   if (!url) return chapters
   log(info('Downloading page for'), emphasizedInfo(url))
-  const urlInstance = new URL(url)
   const dom = await getDom(url)
   const main = getMain(dom, {
     url,
@@ -37,7 +36,7 @@ export const generateBookChapters: GenerateBookChapterFunction = async (
   const article = getBodyHtmlFromDom(compose(getArticle, removeTitle)(main))
   const nextPageHref = await getNextPageLink(dom)
   return await generateBookChapters(
-    generateLink(urlInstance, nextPageHref),
+    generateLink(url, nextPageHref),
     chapters.concat([
       {
         title: title,
