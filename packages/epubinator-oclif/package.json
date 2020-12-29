@@ -1,0 +1,36 @@
+{
+  "name": "epubinator",
+  "description": "NPM package to build epub from url",
+  "version": "0.0.0",
+  "author": "Pravin Bashyal @pravinbashyal",
+  "bin": {
+    "epubinator": "./bin/run"
+  },
+  "bugs": "https://github.com/pravinbashyal/epubinator/issues",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/pravinbashyal/epubinator",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "epubinator"
+  },
+  "repository": "pravinbashyal/epubinator",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
