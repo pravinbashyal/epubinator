@@ -1,4 +1,4 @@
 {
-  "packages": ["../epubinator"],
+  "packages": ["."],
   "version": "independent"
 }
