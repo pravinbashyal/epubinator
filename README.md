@@ -3,4 +3,4 @@ NPM package to generate full epub from a link
 
 ### Usage
 
-`epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] url`
+`node packages/epubinator/build/bin/index.js [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] url`
