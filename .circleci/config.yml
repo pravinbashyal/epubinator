@@ -51,6 +51,6 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - build
+      - build:
           requires:
             - install
