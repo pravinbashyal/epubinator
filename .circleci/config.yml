@@ -6,7 +6,6 @@ docker_defaults: &docker_defaults
 
 install_steps: &install_steps
   steps:
-    - checkout:
     - run:
         name: Install dependencies
         commane: yarn
@@ -14,7 +13,9 @@ install_steps: &install_steps
 jobs:
   install:
     <<: *docker_defaults
-    <<: *install_steps
+    steps:
+      - checkout:
+      - *install_steps
     # steps:
       # - restore_cache: &restore_cache
       #     keys:
