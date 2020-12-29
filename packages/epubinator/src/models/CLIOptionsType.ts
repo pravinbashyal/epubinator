@@ -3,4 +3,5 @@ export type OptionsType = {
   multiurl: boolean
   multipage: boolean
   title: string
+  output: string
 }
