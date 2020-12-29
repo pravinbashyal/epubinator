@@ -4,16 +4,17 @@ docker_defaults: &docker_defaults
   docker:
     - image: node:lts
 
-install: &install
-  - checkout:
-  - run:
-      name: Install dependencies
-      commane: yarn
+install_steps: &install_steps
+  steps:
+    - checkout:
+    - run:
+        name: Install dependencies
+        commane: yarn
 
 jobs:
   install:
     <<: *docker_defaults
-    <<: *install
+    <<: *install_steps
     # steps:
       # - restore_cache: &restore_cache
       #     keys:
@@ -34,7 +35,7 @@ jobs:
   #           - /usr/local/share/.config/yarn
   build:
     <<: *docker_defaults
-    <<: *install
+    <<: *install_steps
     # <<: *restore_cache
     steps:
       - checkout:
@@ -46,7 +47,7 @@ jobs:
           command: cd packages/epubinator && yarn build
   prerelease:
     <<: *docker_defaults
-    <<: *install
+    <<: *install_steps
     steps:
       - checkout:
       - run:
@@ -54,7 +55,7 @@ jobs:
           command: cd packages/epubinator && yarn release:canary
   release:
     <<: *docker_defaults
-    <<: *install
+    <<: *install_steps
     steps:
       - checkout:
       - run:
