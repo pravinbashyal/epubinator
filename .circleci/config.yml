@@ -40,20 +40,58 @@ jobs:
       - run:
           name: "build"
           command: cd packages/epubinator && yarn build
+  prerelease:
+    <<: *docker_defaults
+    # <<: *restore_cache
+    steps:
+      - checkout:
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Release Canary
+          command: cd packages/epubinator && yarn release:canary
+  release:
+    <<: *docker_defaults
+    # <<: *restore_cache
+    steps:
+      - checkout:
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Release Canary
+          command: cd packages/epubinator && yarn release
 
 workflows:
   version: 2
   "epubinator":
     jobs:
       - install
-      - cache:
-          requires:
-            - install
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      # - cache:
+      #     requires:
+      #       - install
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
       - build:
           requires:
             - install
+      - prerelease:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - master
+                - /dependabot-npm_and_yarn-.*/
+      - prerelease:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+               - master
+
