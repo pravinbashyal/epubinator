@@ -1,23 +1,9 @@
 version: 2.0
-jobs:
-  build:
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - checkout:
-      - run:
-          name: "install"
-          command: yarn
-      - run:
-          name: "build"
-          command: cd packages/epubinator && yarn build
 
 docker_defaults: &docker_defaults
   docker:
     - image: node:lts
 
----
-version: 2
 jobs:
   install:
     <<: *docker_defaults
@@ -31,7 +17,7 @@ jobs:
           name: Install dependencies
           command: yarn
   cache:
-    <<: *test
+    <<: *docker_defaults
     steps:
       - checkout
       - run:
@@ -44,7 +30,7 @@ jobs:
             - /usr/local/share/.cache/yarn
             - /usr/local/share/.config/yarn
   build:
-    <<: *test
+    <<: *docker_defaults
     <<: *restore_cache
     steps:
       - checkout:
