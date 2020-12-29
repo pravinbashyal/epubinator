@@ -7,17 +7,20 @@
   "bin": "./build/bin/index.js",
   "scripts": {
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
-    "build": "tsc"
+    "build": "tsc",
+    "in": "lerna init --independent",
+    "release:canary": "lerna version --conventional-commit --conventional-prerelease --preid=alpha",
+    "release": "lerna version --conventional-commit --preid=alpha"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
     "@types/getopts": "^2.1.0",
-    "chalk": "^4.1.0",
     "@types/mozilla-readability": "^0.2.0",
+    "chalk": "^4.1.0",
     "epub-gen": "^0.1.0",
+    "jsdom": "^16.4.0",
     "node-fetch": "^2.6.1",
     "oclif": "^1.16.1",
-    "jsdom": "^16.4.0",
     "ramda": "^0.27.1"
   },
   "prettier": {
@@ -32,6 +35,7 @@
     "@types/node-fetch": "^2.5.7",
     "@types/ramda": "^0.27.34",
     "getopts": "^2.2.5",
+    "lerna": "^3.22.1",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   }
