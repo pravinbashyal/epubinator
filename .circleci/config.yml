@@ -66,14 +66,14 @@ workflows:
   "epubinator":
     jobs:
       - install
-      - cache:
-          requires:
-            - install
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      # - cache:
+      #     requires:
+      #       - install
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
       - build:
           requires:
             - install
