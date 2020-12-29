@@ -1,13 +1,94 @@
 version: 2.0
+
+docker_defaults: &docker_defaults
+  docker:
+    - image: node:lts
+
+install_steps: &install_steps
+  steps:
+    - run:
+        name: Install dependencies
+        commane: yarn
+
 jobs:
+  install:
+    <<: *docker_defaults
+    steps:
+      - checkout:
+      - *install_steps
+    # steps:
+      # - restore_cache: &restore_cache
+      #     keys:
+      #       - v1-npm-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
+      #       - v1-npm-{{checksum ".circleci/config.yml"}}
+  # cache:
+  #   <<: *docker_defaults
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Install dependencies
+  #         command: yarn
+  #     - save_cache:
+  #         key: v1-npm-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
+  #         paths:
+  #           - ~/cli/node_modules
+  #           - /usr/local/share/.cache/yarn
+  #           - /usr/local/share/.config/yarn
   build:
-    docker:
-      - image: circleci/node:lts
+    <<: *docker_defaults
+    <<: *install_steps
+    # <<: *restore_cache
     steps:
       - checkout:
       - run:
-          name: "install"
+          name: Install dependencies
           command: yarn
       - run:
           name: "build"
           command: cd packages/epubinator && yarn build
+  prerelease:
+    <<: *docker_defaults
+    <<: *install_steps
+    steps:
+      - checkout:
+      - run:
+          name: Release Canary
+          command: cd packages/epubinator && yarn release:canary
+  release:
+    <<: *docker_defaults
+    <<: *install_steps
+    steps:
+      - checkout:
+      - run:
+          name: Release
+          command: cd packages/epubinator && yarn release
+workflows:
+  version: 2
+  "epubinator":
+    jobs:
+      - install
+      # - cache:
+      #     requires:
+      #       - install
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
+      - build:
+          requires:
+            - install
+      - prerelease:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - master
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
