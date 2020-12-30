@@ -9,7 +9,15 @@
     "noEmitHelpers": false,
     "importHelpers": true,
     "downlevelIteration": true,
-    "lib": ["es2015", "es6", "dom", "es7", "es2017", "esnext.asynciterable"],
+    "lib": [
+      "esnext",
+      "es2015",
+      "es6",
+      "dom",
+      "es7",
+      "es2017",
+      "esnext.asynciterable"
+    ],
     "baseUrl": "src",
     "outDir": "./build/"
   },

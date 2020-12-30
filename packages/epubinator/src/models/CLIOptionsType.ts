@@ -4,4 +4,5 @@ export type OptionsType = {
   multipage: boolean
   title: string
   output: string
+  author: string
 }

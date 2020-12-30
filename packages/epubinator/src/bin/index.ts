@@ -12,12 +12,13 @@ const options = getopts(process.argv.slice(2), {
     title: 't',
     output: 'o',
     version: 'v',
+    author: 'a',
   },
   default: {
     multiurl: false,
     multipage: true,
-    default: '',
     output: './',
+    author: '',
   },
 })
 
@@ -34,7 +35,7 @@ if (options.help) {
 
 const website = options['_'][0]
 
-const { multiurl, multipage, title, output, version } = options
+const { multiurl, multipage, title, output, version, author } = options
 
 if (version) {
   showVersion()
@@ -49,5 +50,6 @@ if (version) {
     multipage,
     title: title || website,
     output: output || process.cwd(),
+    author: author,
   })
 }
