@@ -1,9 +1,8 @@
-![doofenshmirtz](https://i.imgur.com/kys3wDv.png)
+
 
 # epubinator
+<img src="https://i.imgur.com/kys3wDv.png" alt="Doofenshmirtz reading to Perry the platypus" width="650" style="object-fit: contain;"/>
 NPM package to generate full epub from a link. It uses JSDom under the hood to parse the html.
-
-=======
 
 
 # Installation
