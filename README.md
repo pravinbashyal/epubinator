@@ -25,6 +25,6 @@ npm i -g epubinator
 # Usage
 
 ```
-epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] url
+epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] [-t|--title=string] url
 ```
 ![example of downloading https://courses.dcs.wisc.edu/wp/readinggerman/introduction/](https://files.slack.com/files-pri/T0D02RHL6-F01HCHD0FJT/output.gif?pub_secret=d32cb6190a)
