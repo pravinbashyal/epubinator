@@ -49,6 +49,11 @@ jobs:
           name: Install dependencies
           command: yarn
       - run:
+          name: Git config
+          commands:
+            - git config --global user.email pravin.bashyal@gmail.com
+            - git config --global user.name pravinbashyal
+      - run:
           name: Release Canary
           command: cd packages/epubinator && yarn release:canary
   release:
