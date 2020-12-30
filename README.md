@@ -1,5 +1,10 @@
+![doofenshmirtz](https://i.imgur.com/kys3wDv.png)
+
 # epubinator
 NPM package to generate full epub from a link. It uses JSDom under the hood to parse the html.
+
+=======
+
 
 # Installation
 
