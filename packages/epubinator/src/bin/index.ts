@@ -3,18 +3,21 @@
 import { main } from '../main'
 import * as getopts from 'getopts'
 
+import { showVersion } from '../version'
+
 const options = getopts(process.argv.slice(2), {
   alias: {
     multiurl: 'm',
     multipage: 'p',
     title: 't',
-    output: 'o'
+    output: 'o',
+    version: 'v',
   },
   default: {
     multiurl: false,
     multipage: true,
     default: '',
-    output: './'
+    output: './',
   },
 })
 
@@ -31,11 +34,20 @@ if (options.help) {
 
 const website = options['_'][0]
 
-const { multiurl, multipage, title, output } = options
+const { multiurl, multipage, title, output, version } = options
 
-if (!website) {
-  console.log('missing url \n')
-  printUsage()
+if (version) {
+  showVersion()
+} else {
+  if (!website) {
+    console.log('missing url \n')
+    printUsage()
+  }
+
+  main(website, {
+    multiurl,
+    multipage,
+    title: title || website,
+    output: output || process.cwd(),
+  })
 }
-
-main(website, { multiurl, multipage, title: title || website, output : output ||  process.cwd() })
