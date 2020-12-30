@@ -28,10 +28,15 @@ async function main(url: string, options: Partial<OptionsType> = {}) {
     css,
     ...config,
     ...book,
-    title: options.title,
     verbose: true,
   }
-  new Epub(option, option.output + `${option.title || 'output'}.epub`)
+  new Epub(
+    option,
+    option.output +
+      `${
+        option.title.replaceAll(/\//g, '-').replaceAll(':', '') || 'output'
+      }.epub`
+  )
 }
 
 export { main }
