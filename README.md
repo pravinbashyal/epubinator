@@ -47,3 +47,7 @@ $ epubunator [-v|--version]
 - `-a|--author=string` (_default=''_): Author of the book
 
 - `-v|--version`: Print the current version of package
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
