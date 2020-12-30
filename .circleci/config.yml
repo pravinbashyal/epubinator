@@ -38,6 +38,7 @@ jobs:
     <<: *docker_defaults
     # <<: *restore_cache
     steps:
+      - checkout:
       - run: *yarn_install
       - run: *git_setup
       - run:
@@ -46,6 +47,7 @@ jobs:
   release:
     <<: *docker_defaults
     steps:
+      - checkout:
       - run: *yarn_install
       - run: *git_setup
       - run:
