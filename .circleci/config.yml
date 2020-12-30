@@ -3,29 +3,30 @@ version: 2.0
 docker_defaults: &docker_defaults
   docker:
     - image: node:lts
-git_setup: &git_setup
-  - run:
-      name: Install dependencies
-      command: yarn
-  - run:
-      name: Git config
-      command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
-  - add_ssh_keys:
-      fingerprints:
-        - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+
+procedures:
+  yarn_install:
+    - checkout
+    - run:
+        name: Install dependencies
+        command: yarn
+  git_setup:
+    - run:
+        name: Git config
+        command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
+    - add_ssh_keys:
+        fingerprints:
+          - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
 
 jobs:
   install:
     <<: *docker_defaults
     steps:
-      - checkout
+      - procedure: yarn_install
       # - restore_cache: &restore_cache
       #     keys:
       #       - v1-npm-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
       #       - v1-npm-{{checksum ".circleci/config.yml"}}
-      - run:
-          name: Install dependencies
-          command: yarn
   # cache:
   #   <<: *docker_defaults
   #   steps:
@@ -54,28 +55,16 @@ jobs:
     <<: *docker_defaults
     # <<: *restore_cache
     steps:
-      - checkout:
-      - *git_setup
-      - run:
-          name: Install dependencies
-          command: yarn
-      - run:
-          name: Git config
-          command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
-      - add_ssh_keys:
-          fingerprints:
-            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+      - procedure: yarn_install
+      - procedure: git_setup
       - run:
           name: Release Canary
           command: cd packages/epubinator && npx lerna version --conventional-commits --conventional-prerelease --preid=alpha --yes
   release:
     <<: *docker_defaults
-    # <<: *restore_cache
     steps:
-      - checkout:
-      - run:
-          name: Install dependencies
-          command: yarn
+      - procedure: yarn_install
+      - procedure: git_setup
       - run:
           name: Release Canary
           command: cd packages/epubinator && npx lerna version --conventional-commits --preid=alpha --yes
