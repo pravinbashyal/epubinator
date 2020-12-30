@@ -51,7 +51,7 @@ jobs:
       - run: *yarn_install
       - run: *git_setup
       - run:
-          name: Release Canary
+          name: Release
           command: cd packages/epubinator && npx lerna version --conventional-commits --preid=alpha --yes
 
 workflows:
