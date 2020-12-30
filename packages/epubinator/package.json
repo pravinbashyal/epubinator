@@ -1,6 +1,6 @@
 {
   "name": "epubinator",
-  "version": "0.0.1-pre-alpha",
+  "version": "0.0.1-alpha.0",
   "main": "./build/index.js",
   "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
   "license": "MIT",
