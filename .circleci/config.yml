@@ -51,9 +51,12 @@ jobs:
       - run:
           name: Git config
           command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
+      - add_ssh_keys:
+          fingerprints:
+            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
       - run:
           name: Release Canary
-          command: cd packages/epubinator && yarn release:canary
+          command: cd packages/epubinator && npx lerna version --conventional-commits --conventional-prerelease --preid=alpha --yes
   release:
     <<: *docker_defaults
     # <<: *restore_cache
@@ -64,7 +67,7 @@ jobs:
           command: yarn
       - run:
           name: Release Canary
-          command: cd packages/epubinator && yarn release
+          command: cd packages/epubinator && npx lerna version --conventional-commits --preid=alpha --yes
 
 workflows:
   version: 2
