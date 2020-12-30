@@ -3,6 +3,16 @@ version: 2.0
 docker_defaults: &docker_defaults
   docker:
     - image: node:lts
+git_setup: &git_setup
+  - run:
+      name: Install dependencies
+      command: yarn
+  - run:
+      name: Git config
+      command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
+  - add_ssh_keys:
+      fingerprints:
+        - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
 
 jobs:
   install:
@@ -45,6 +55,7 @@ jobs:
     # <<: *restore_cache
     steps:
       - checkout:
+      - *git_setup
       - run:
           name: Install dependencies
           command: yarn
