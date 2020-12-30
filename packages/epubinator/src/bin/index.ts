@@ -3,39 +3,32 @@
 import { main } from '../main'
 import * as getopts from 'getopts'
 
-import { showVersion } from '../version'
+import { printUsage, showVersion } from '../announcer'
 
 const options = getopts(process.argv.slice(2), {
   alias: {
     multiurl: 'm',
-    multipage: 'p',
     title: 't',
-    output: 'o',
+    path: 'p',
     version: 'v',
     author: 'a',
+    help: 'h',
   },
   default: {
     multiurl: false,
-    multipage: true,
-    output: './',
+    path: './',
     author: '',
   },
 })
 
-const printUsage = () => {
-  console.log(
-    'usage: epubinator [-m|--multiurl=boolean] [-p|--multipage=boolean] [-o|--output=string] url'
-  )
-  process.exit(0)
-}
-
 if (options.help) {
   printUsage()
+  process.exit(0)
 }
 
 const website = options['_'][0]
 
-const { multiurl, multipage, title, output, version, author } = options
+const { multiurl, title, path, version, author } = options
 
 if (version) {
   showVersion()
@@ -43,13 +36,13 @@ if (version) {
   if (!website) {
     console.log('missing url \n')
     printUsage()
+    process.exit(0)
   }
 
   main(website, {
     multiurl,
-    multipage,
     title: title || website,
-    output: output || process.cwd(),
+    path: path || process.cwd(),
     author: author,
   })
 }
