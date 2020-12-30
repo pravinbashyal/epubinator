@@ -1,13 +1,103 @@
 version: 2.0
+
+docker_defaults: &docker_defaults
+  docker:
+    - image: node:lts
+
 jobs:
+  install:
+    <<: *docker_defaults
+    steps:
+      - checkout
+      # - restore_cache: &restore_cache
+      #     keys:
+      #       - v1-npm-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
+      #       - v1-npm-{{checksum ".circleci/config.yml"}}
+      - run:
+          name: Install dependencies
+          command: yarn
+  # cache:
+  #   <<: *docker_defaults
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Install dependencies
+  #         command: yarn
+  #     - save_cache:
+  #         key: v1-npm-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
+  #         paths:
+  #           - ~/cli/node_modules
+  #           - /usr/local/share/.cache/yarn
+  #           - /usr/local/share/.config/yarn
   build:
-    docker:
-      - image: circleci/node:lts
+    <<: *docker_defaults
+    # <<: *restore_cache
     steps:
       - checkout:
       - run:
-          name: "install"
+          name: Install dependencies
           command: yarn
       - run:
           name: "build"
           command: cd packages/epubinator && yarn build
+  prerelease:
+    <<: *docker_defaults
+    # <<: *restore_cache
+    steps:
+      - checkout:
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Git config
+          command: git config --global user.email pravin.bashyal@gmail.com && git config --global user.name pravinbashyal
+      - add_ssh_keys:
+          fingerprints:
+            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+      - run:
+          name: Release Canary
+          command: cd packages/epubinator && npx lerna version --conventional-commits --conventional-prerelease --preid=alpha --yes
+  release:
+    <<: *docker_defaults
+    # <<: *restore_cache
+    steps:
+      - checkout:
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Release Canary
+          command: cd packages/epubinator && npx lerna version --conventional-commits --preid=alpha --yes
+
+workflows:
+  version: 2
+  "epubinator":
+    jobs:
+      - install
+      # - cache:
+      #     requires:
+      #       - install
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
+      - build:
+          requires:
+            - install
+      - prerelease:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - master
+                - /dependabot-npm_and_yarn-.*/
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+               - master
+
