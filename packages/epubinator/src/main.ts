@@ -32,7 +32,7 @@ async function main(url: string, options: Partial<OptionsType> = {}) {
   }
   new Epub(
     option,
-    option.output +
+    option.path +
       `${
         option.title.replaceAll(/\//g, '-').replaceAll(':', '') || 'output'
       }.epub`
