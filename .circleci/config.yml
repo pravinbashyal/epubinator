@@ -43,7 +43,7 @@ jobs:
       - run: *git_setup
       - run:
           name: Release Canary
-          command: cd packages/epubinator && npx lerna publish --conventional-commits --conventional-prerelease --canary --create-release --yes --preid=alpha
+          command: cd packages/epubinator && npx lerna publish --conventional-commits --conventional-prerelease --canary --yes --preid=alpha
   release:
     <<: *docker_defaults
     steps:
@@ -52,7 +52,7 @@ jobs:
       - run: *git_setup
       - run:
           name: Release
-          command: cd packages/epubinator && npx lerna publish --conventional-commits --create-release --yes --preid=alpha
+          command: cd packages/epubinator && npx lerna publish --conventional-commits --create-release="github" --yes --preid=alpha
 
 workflows:
   version: 2
