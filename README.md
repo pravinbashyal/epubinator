@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 <h1>epubinator</h1>
 
 <img src="https://i.imgur.com/kys3wDv.png" alt="Doofenshmirtz reading to Perry the platypus" width="650" style="object-fit: contain;"/>
