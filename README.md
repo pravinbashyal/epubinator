@@ -25,30 +25,29 @@ npm i -g epubinator
 # Usage
 
 ```
-epubinator  \
+$ epubinator  \
   [-m|--multiurl=boolean]  \
   [-p|--path=string] \
   [-t|--title=string] \
   [-a|--author=string] \
   url
 
-epubunator [-v|--version]
+$ epubunator [-v|--version]
 ```
 ![example of downloading https://courses.dcs.wisc.edu/wp/readinggerman/introduction/](https://files.slack.com/files-pri/T0D02RHL6-F01HCHD0FJT/output.gif?pub_secret=d32cb6190a)
 
 # Options
 
-## -m|--multiurl=boolean (default=false)
-If set to `true`, searches for next page navigator in the page, until it no longer finds a next navigator. Each page creates an instance in table of contents with a dedicated chapter
+- `-m|--multiurl=boolean` (_default=false_): If set to `true`, searches for next page navigator in the page, until it no longer finds a next navigator. Each page creates an instance in table of contents with a dedicated chapter
 
-## -p|--path=string (default=./)
-The path for output file
+- `-p|--path=string` (_default=./_): The path for output file
 
-## -t|--title=string (default= <url of the initial link with '/' replaced with '-' and ':' removed>)
-Title of the book. It also sets the filename of output file.
+- `-t|--title=string` (_default= <url of the initial link with '/' replaced with '-' and ':' removed>_): Title of the book. It also sets the filename of output file.
 
-## -a|--author=string (default='')
-Author of the book
+- `-a|--author=string` (_default=''_): Author of the book
 
-## -v|--version
-Print the current version of package
+- `-v|--version`: Print the current version of package
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
