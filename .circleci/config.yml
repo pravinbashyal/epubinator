@@ -4,6 +4,10 @@ docker_defaults: &docker_defaults
   docker:
     - image: node:lts
 
+npm_token: &npm_token
+  name: Set .npmrc
+  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
 yarn_install: &yarn_install
   name: Install dependencies
   command: yarn
@@ -41,6 +45,7 @@ jobs:
       - checkout:
       - run: *yarn_install
       - run: *git_setup
+      - run: *npm_token
       - run:
           name: Release Canary
           command: cd packages/epubinator && yarn release:canary
@@ -50,6 +55,7 @@ jobs:
       - checkout:
       - run: *yarn_install
       - run: *git_setup
+      - run: *npm_token
       - run:
           name: Release
           command: cd packages/epubinator && yarn release
