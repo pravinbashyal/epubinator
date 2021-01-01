@@ -10,9 +10,6 @@
     "ebook"
   ],
   "homepage": "https://github.com/pravinbashyal/epubinator",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pravinbashyal/epubinator.git"
@@ -24,8 +21,8 @@
   "scripts": {
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
     "build": "tsc",
-    "prerelease": "lerna version --conventional-commits --conventional-prerelease --yes --preid=alpha",
-    "release": "lerna version --conventional-commits --preid=alpha --yes"
+    "release:canary": "lerna publish --conventional-commits --conventional-prerelease --canary --yes --preid=alpha",
+    "release": "lerna publish --conventional-commits --create-release=\"github\" --yes --preid=alpha"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
@@ -46,6 +43,7 @@
     "printWidth": 80
   },
   "devDependencies": {
+    "@lerna/publish": "^3.22.1",
     "@lerna/version": "^3.22.1",
     "@types/jsdom": "^16.2.5",
     "@types/node-fetch": "^2.5.7",
