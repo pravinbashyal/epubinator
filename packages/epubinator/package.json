@@ -22,7 +22,7 @@
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
     "build": "tsc",
     "release:canary": "lerna publish --conventional-commits --conventional-prerelease --canary --yes --preid=alpha",
-    "release": "lerna publish --conventional-commits --create-release=\"github\" --yes --preid=alpha"
+    "release": "lerna publish --conventional-commits --yes --preid=alpha"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
