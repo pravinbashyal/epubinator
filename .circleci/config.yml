@@ -52,7 +52,7 @@ jobs:
       - run: *git_setup
       - run:
           name: Release
-          command: cd packages/epubinator && lerna publish --conventional-commits --create-release="github" --yes --preid=alpha
+          command: cd packages/epubinator && yarn release
 
 workflows:
   version: 2
