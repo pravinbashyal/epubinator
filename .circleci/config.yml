@@ -52,7 +52,7 @@ jobs:
       - run: *git_setup
       - run:
           name: Release
-          command: cd packages/epubinator && npx lerna version --conventional-commits --preid=alpha --yes
+          command: cd packages/epubinator && npx lerna version --conventional-commits --conventional-graduate --preid=alpha --yes
 
 workflows:
   version: 2
