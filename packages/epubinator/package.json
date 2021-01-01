@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build:watch": "cp -r src/textfiles build/ && tsc -w",
-    "build": "tsc",
+    "build": "cp -r src/textfiles build/ && tsc",
     "release:canary": "lerna publish --conventional-commits --conventional-prerelease --canary --yes --preid=alpha",
     "release": "lerna publish --conventional-commits --yes --preid=alpha"
   },
