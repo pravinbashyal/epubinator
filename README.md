@@ -1,6 +1,7 @@
 
 
-# epubinator
+# epubinator 
+[![Maintainability](https://api.codeclimate.com/v1/badges/f4569c914c8b46db0964/maintainability)](https://codeclimate.com/github/pravinbashyal/epubinator/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/f4569c914c8b46db0964/test_coverage)](https://codeclimate.com/github/pravinbashyal/epubinator/test_coverage)
 <img src="https://i.imgur.com/kys3wDv.png" alt="Doofenshmirtz reading to Perry the platypus" width="650" style="object-fit: contain;"/>
 NPM package to generate full epub from a link. It uses JSDom under the hood to parse the html.
 
