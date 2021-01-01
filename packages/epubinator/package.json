@@ -3,6 +3,20 @@
   "version": "0.0.3-alpha.9",
   "main": "./build/index.js",
   "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
+  "description": "NPM package to generate epub files out of url",
+  "keywords": [
+    "epub",
+    "epubinator",
+    "ebook"
+  ],
+  "homepage": "https://github.com/pravinbashyal/epubinator",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pravinbashyal/epubinator.git"
+  },
   "license": "MIT",
   "bin": "./build/bin/index.js",
   "scripts": {
