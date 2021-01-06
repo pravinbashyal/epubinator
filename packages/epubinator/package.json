@@ -22,7 +22,7 @@
     "build:watch": "cp -r src/textfiles build/textfiles && tsc -w",
     "build": "tsc && mkdir -p build/textfiles && cp src/textfiles/* build/textfiles/",
     "release:canary": "lerna publish --conventional-commits --conventional-prerelease --canary --yes --preid=alpha",
-    "release:graduate-alpha": "lerna publish --conventional-commits --conventional-graduate --yes --preid=alpha",
+    "release:graduate": "lerna publish --conventional-commits --conventional-graduate --yes --preid=alpha",
     "release": "lerna publish --conventional-commits --yes --preid=alpha",
     "test": "node ../../node_modules/jest/bin/jest.js",
     "test:coverage": "node ../../node_modules/jest/bin/jest.js --coverage"
