@@ -34,7 +34,7 @@ async function main(url: string, options: Partial<OptionsType> = {}) {
     option,
     option.path +
       `${
-        option.title.replaceAll(/\//g, '-').replaceAll(':', '') || 'output'
+        option.title.replace(/\//g, '-').replace(':', '') || 'output'
       }.epub`
   )
 }
