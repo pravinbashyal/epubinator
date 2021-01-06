@@ -95,9 +95,17 @@ workflows:
                - master
       - hold-graduate-alpha:
           type: approval
+          filters:
+            branches:
+              only:
+               - master
           requires:
             - build
       - graduate-alpha:
+          filters:
+            branches:
+              only:
+               - master
           requires:
             - hold-graduate-alpha
 
