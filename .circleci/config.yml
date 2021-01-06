@@ -66,6 +66,7 @@ jobs:
     steps:
       - checkout:
       - run: *yarn_install
+      - run: *yarn_build
       - run: *git_setup
       - run: *npm_token
       - run:
