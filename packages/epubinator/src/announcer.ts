@@ -7,7 +7,8 @@ const showVersion = () => {
     emphasizedInfo(' Epubinator'),
     lineBreak,
     info('version: '),
-    emphasizedInfo(version)
+    emphasizedInfo(version),
+    lineBreak,
   )
 }
 
