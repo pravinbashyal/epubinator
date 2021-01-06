@@ -61,6 +61,16 @@ jobs:
       - run:
           name: Release
           command: cd packages/epubinator && yarn release
+  graduate-alpha:
+    <<: *docker_defaults
+    steps:
+      - checkout:
+      - run: *yarn_install
+      - run: *git_setup
+      - run: *npm_token
+      - run:
+          name: Graduate Alpha
+          command: cd packages/epubinator && yarn release:graduate
 
 workflows:
   version: 2
@@ -85,4 +95,19 @@ workflows:
             branches:
               only:
                - master
+      - hold-graduate-alpha:
+          type: approval
+          filters:
+            branches:
+              only:
+               - master
+          requires:
+            - build
+      - graduate-alpha:
+          filters:
+            branches:
+              only:
+               - master
+          requires:
+            - hold-graduate-alpha
 
