@@ -45,6 +45,9 @@
     "trailingComma": "es5",
     "printWidth": 80
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "devDependencies": {
     "@lerna/publish": "^3.22.1",
     "@lerna/version": "^3.22.1",
