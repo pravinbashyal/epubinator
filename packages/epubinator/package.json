@@ -52,7 +52,7 @@
     "@lerna/publish": "^3.22.1",
     "@lerna/version": "^3.22.1",
     "@types/jest": "^26.0.20",
-    "@types/jsdom": "^16.2.5",
+    "@types/jsdom": "^16.2.6",
     "@types/node-fetch": "^2.5.7",
     "@types/ramda": "^0.27.34",
     "getopts": "^2.2.5",
