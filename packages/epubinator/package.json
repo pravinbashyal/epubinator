@@ -33,7 +33,7 @@
     "@types/mozilla-readability": "^0.2.0",
     "chalk": "^4.1.0",
     "epub-gen": "^0.1.0",
-    "jsdom": "^16.5.0",
+    "jsdom": "^16.5.1",
     "node-fetch": "^2.6.1",
     "oclif": "^1.16.2",
     "ramda": "^0.27.1"
