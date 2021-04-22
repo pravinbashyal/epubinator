@@ -31,7 +31,7 @@
     "@types/chalk": "^2.2.0",
     "@types/getopts": "^2.1.0",
     "@types/mozilla-readability": "^0.2.0",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.1",
     "epub-gen": "^0.1.0",
     "jsdom": "^16.5.3",
     "node-fetch": "^2.6.1",
