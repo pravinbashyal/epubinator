@@ -51,7 +51,7 @@
   "devDependencies": {
     "@lerna/publish": "^4.0.0",
     "@lerna/version": "^4.0.0",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.23",
     "@types/jsdom": "^16.2.10",
     "@types/node-fetch": "^2.5.10",
     "@types/ramda": "^0.27.40",
