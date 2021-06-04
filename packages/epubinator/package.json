@@ -56,7 +56,7 @@
     "@types/node-fetch": "^2.5.10",
     "@types/ramda": "^0.27.40",
     "getopts": "^2.3.0",
-    "jest": "^27.0.3",
+    "jest": "^27.0.4",
     "jest-cli": "^27.0.1",
     "lerna": "^4.0.0",
     "prettier": "^2.3.0",
