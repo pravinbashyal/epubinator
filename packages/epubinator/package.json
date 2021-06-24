@@ -54,7 +54,7 @@
     "@types/jest": "^26.0.23",
     "@types/jsdom": "^16.2.11",
     "@types/node-fetch": "^2.5.10",
-    "@types/ramda": "^0.27.40",
+    "@types/ramda": "^0.27.41",
     "getopts": "^2.3.0",
     "jest": "^27.0.5",
     "jest-cli": "^27.0.5",
