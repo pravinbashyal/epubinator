@@ -1846,10 +1846,10 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.2.3.tgz#ef65165aea2924c9359205bf748865b8881753c0"
   integrity sha512-PijRCG/K3s3w1We6ynUKdxEc5AcuuH3NBmMDP8uvKVp6X43UY7NQlTzczakXP3DJR0F4dfNQIGjU2cUeRYs2AA==
 
-"@types/ramda@^0.27.41":
-  version "0.27.41"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.41.tgz#4532a03353c475fe152438e7f02d269a51c27145"
-  integrity sha512-SxKnQzrPmA5ly2BvHrTE5BvZEkQgs3kSYBcscWUOWP9FGVDGVdzlWXpiSBJhzBxe0pFQ/amM4cjFRi9R5PFoQg==
+"@types/ramda@^0.27.42":
+  version "0.27.42"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.42.tgz#4a61332c143ee5601ca8a7415544b9c79061d1b4"
+  integrity sha512-O4b1HAiT4mD4/PaPtAg5LEPs5E05tKPnFbVsDTC/ChBd1Wl9jbmwHm1GcumXv4AuENwv8XD8ciTyn+hRXDs6qQ==
   dependencies:
     ts-toolbelt "^6.15.1"
 
@@ -6843,10 +6843,10 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-oclif@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-1.18.0.tgz#2d042ea50e7b8dfbef94f7c0f0693f42ef7cc47f"
-  integrity sha512-GLnwhESkPqM2cElRSZ9KwoUJ9OPiQEFaUM8xbBQDcygapuYcTIpcCj6hCsDhnLzSJj2DDgqDjmQlNeT29LUr0g==
+oclif@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-1.18.1.tgz#07f7244932652967728ae58038a6652b51b43934"
+  integrity sha512-bX9lwpEBHcWhUldHOCstS08JOo69lQfS3qCeimJRGdXKflewarwEWZiWG2vTJi30KuwT0YyObCAJO7Ux1XI9ew==
   dependencies:
     "@oclif/command" "^1.6"
     "@oclif/config" "^1.12.6"
