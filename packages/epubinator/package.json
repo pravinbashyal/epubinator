@@ -53,7 +53,7 @@
     "@lerna/version": "^4.0.0",
     "@types/jest": "^27.0.1",
     "@types/jsdom": "^16.2.13",
-    "@types/node-fetch": "^2.5.12",
+    "@types/node-fetch": "^3.0.3",
     "@types/ramda": "^0.27.44",
     "getopts": "^2.3.0",
     "jest": "^27.1.0",
