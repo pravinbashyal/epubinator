@@ -1,6 +1,6 @@
 {
   "name": "epubinator",
-  "version": "0.0.96",
+  "version": "0.0.97",
   "main": "./build/index.js",
   "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
   "description": "NPM package to generate epub files out of url",
@@ -59,7 +59,7 @@
     "jest": "^27.1.1",
     "jest-cli": "^27.1.1",
     "lerna": "^4.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   }
