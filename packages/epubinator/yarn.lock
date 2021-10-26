@@ -1644,9 +1644,27 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
+<<<<<<< HEAD
 "@types/jsdom@^16.2.11":
   version "16.2.11"
   resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.11.tgz#e18bd29e0678bb9a16ee74d3c0fb9788e8a4286b"
+=======
+<<<<<<< HEAD
+"@types/jsdom@^16.2.10":
+  version "16.2.10"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.10.tgz#c05ea94682d035943ae2453b79d56178496b6653"
+=======
+<<<<<<< HEAD
+"@types/jsdom@^16.2.10":
+  version "16.2.10"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.10.tgz#c05ea94682d035943ae2453b79d56178496b6653"
+=======
+"@types/jsdom@^16.2.11":
+  version "16.2.11"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.11.tgz#e18bd29e0678bb9a16ee74d3c0fb9788e8a4286b"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
   dependencies:
     "@types/node" "*"
     "@types/parse5" "*"
@@ -1751,9 +1769,27 @@ acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz"
 
+<<<<<<< HEAD
 acorn@^8.2.4:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
+=======
+<<<<<<< HEAD
+acorn@^8.1.0:
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
+=======
+<<<<<<< HEAD
+acorn@^8.1.0:
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
+=======
+acorn@^8.2.4:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -2305,8 +2341,13 @@ caniuse-lite@^1.0.30001181:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001203.tgz#a7a34df21a387d9deffcd56c000b8cf5ab540580"
 
 caniuse-lite@^1.0.30001219:
+<<<<<<< HEAD
   version "1.0.30001237"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001237.tgz#4b7783661515b8e7151fc6376cfd97f0e427b9e5"
+=======
+  version "1.0.30001239"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001239.tgz#66e8669985bb2cb84ccb10f68c25ce6dd3e4d2b8"
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -4044,8 +4085,8 @@ grouped-queue@^1.1.0:
     lodash "^4.17.15"
 
 handlebars@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/handlebars/-/handlebars-4.7.6.tgz"
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
@@ -4377,7 +4418,7 @@ is-arrayish@^0.2.1:
 
 is-buffer@^1.1.5:
   version "1.1.6"
-  resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
 is-buffer@^2.0.2:
   version "2.0.5"
@@ -5105,12 +5146,67 @@ jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/jsbn/-/jsbn-0.1.1.tgz"
 
+<<<<<<< HEAD
 jsdom@^16.6.0:
   version "16.6.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.6.0.tgz#f79b3786682065492a3da6a60a4695da983805ac"
   dependencies:
     abab "^2.0.5"
     acorn "^8.2.4"
+=======
+<<<<<<< HEAD
+jsdom@^16.4.0:
+  version "16.4.0"
+  resolved "https://registry.npmjs.org/jsdom/-/jsdom-16.4.0.tgz"
+  dependencies:
+    abab "^2.0.3"
+    acorn "^7.1.1"
+    acorn-globals "^6.0.0"
+    cssom "^0.4.4"
+    cssstyle "^2.2.0"
+    data-urls "^2.0.0"
+    decimal.js "^10.2.0"
+    domexception "^2.0.1"
+    escodegen "^1.14.1"
+    html-encoding-sniffer "^2.0.1"
+    is-potential-custom-element-name "^1.0.0"
+    nwsapi "^2.2.0"
+    parse5 "5.1.1"
+    request "^2.88.2"
+    request-promise-native "^1.0.8"
+    saxes "^5.0.0"
+    symbol-tree "^3.2.4"
+    tough-cookie "^3.0.1"
+    w3c-hr-time "^1.0.2"
+    w3c-xmlserializer "^2.0.0"
+    webidl-conversions "^6.1.0"
+    whatwg-encoding "^1.0.5"
+    whatwg-mimetype "^2.3.0"
+    whatwg-url "^8.0.0"
+    ws "^7.2.3"
+    xml-name-validator "^3.0.0"
+
+jsdom@^16.5.3:
+  version "16.5.3"
+  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.5.3.tgz#13a755b3950eb938b4482c407238ddf16f0d2136"
+<<<<<<< HEAD
+  dependencies:
+    abab "^2.0.5"
+    acorn "^8.1.0"
+=======
+  dependencies:
+    abab "^2.0.5"
+    acorn "^8.1.0"
+=======
+jsdom@^16.6.0:
+  version "16.6.0"
+  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.6.0.tgz#f79b3786682065492a3da6a60a4695da983805ac"
+  dependencies:
+    abab "^2.0.5"
+    acorn "^8.2.4"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
     acorn-globals "^6.0.0"
     cssom "^0.4.4"
     cssstyle "^2.3.0"
@@ -5134,7 +5230,18 @@ jsdom@^16.6.0:
     whatwg-encoding "^1.0.5"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.5.0"
+<<<<<<< HEAD
     ws "^7.4.5"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+    ws "^7.4.4"
+=======
+    ws "^7.4.5"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
     xml-name-validator "^3.0.0"
 
 jsesc@^2.5.1:
@@ -5196,7 +5303,7 @@ jsprim@^1.2.2:
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
-  resolved "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
   dependencies:
     is-buffer "^1.1.5"
 
@@ -5420,13 +5527,17 @@ lodash.union@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmjs.org/lodash.union/-/lodash.union-4.6.0.tgz"
 
+<<<<<<< HEAD
 lodash@4.x, lodash@^4.7.0:
+=======
+<<<<<<< HEAD
+lodash@4.x, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.5.1, lodash@^4.7.0:
+=======
+lodash@4.x, lodash@^4.7.0:
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.5.1:
-  version "4.17.20"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -5883,7 +5994,7 @@ ncp@2.0.0:
 
 neo-async@^2.6.0:
   version "2.6.2"
-  resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
 
 nested-error-stacks@^1.0.0, nested-error-stacks@^1.0.1:
   version "1.0.2"
@@ -7036,8 +7147,8 @@ set-blocking@~2.0.0:
   resolved "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz"
 
 set-getter@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/set-getter/-/set-getter-0.1.0.tgz"
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/set-getter/-/set-getter-0.1.1.tgz#a3110e1b461d31a9cfc8c5c9ee2e9737ad447102"
   dependencies:
     to-object-path "^0.3.0"
 
@@ -7645,7 +7756,7 @@ to-fast-properties@^2.0.0:
 
 to-object-path@^0.3.0:
   version "0.3.0"
-  resolved "https://registry.npmjs.org/to-object-path/-/to-object-path-0.3.0.tgz"
+  resolved "https://registry.yarnpkg.com/to-object-path/-/to-object-path-0.3.0.tgz#297588b7b0e7e0ac08e04e672f85c1f4999e17af"
   dependencies:
     kind-of "^3.0.2"
 
@@ -7718,9 +7829,27 @@ trim-off-newlines@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz"
 
+<<<<<<< HEAD
 ts-jest@^27.0.3:
   version "27.0.3"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.0.3.tgz#808492f022296cde19390bb6ad627c8126bf93f8"
+=======
+<<<<<<< HEAD
+ts-jest@^26.5.6:
+  version "26.5.6"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
+=======
+<<<<<<< HEAD
+ts-jest@^26.5.6:
+  version "26.5.6"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
+=======
+ts-jest@^27.0.3:
+  version "27.0.3"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.0.3.tgz#808492f022296cde19390bb6ad627c8126bf93f8"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
@@ -7795,13 +7924,31 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
 
+<<<<<<< HEAD
 typescript@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.3.tgz#5401db69bd3203daf1851a1a74d199cb3112c11a"
+=======
+<<<<<<< HEAD
+typescript@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+=======
+<<<<<<< HEAD
+typescript@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+=======
+typescript@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.4.tgz#3f85b986945bcf31071decdd96cf8bfa65f9dcbc"
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
 
 uglify-js@^3.1.4:
-  version "3.12.3"
-  resolved "https://registry.npmjs.org/uglify-js/-/uglify-js-3.12.3.tgz"
+  version "3.13.5"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.13.5.tgz#5d71d6dbba64cf441f32929b1efce7365bb4f113"
 
 uid-number@0.0.6:
   version "0.0.6"
@@ -8020,12 +8167,34 @@ whatwg-url@^8.0.0, whatwg-url@^8.4.0:
     webidl-conversions "^6.1.0"
 
 whatwg-url@^8.5.0:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.5.0.tgz#7752b8464fc0903fec89aa9846fc9efe07351fd3"
+  dependencies:
+    lodash "^4.7.0"
+    tr46 "^2.0.2"
+    webidl-conversions "^6.1.0"
+
+which-module@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz"
+=======
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.6.0.tgz#27c0205a4902084b872aecb97cf0f2a7a3011f4c"
   dependencies:
     lodash "^4.7.0"
     tr46 "^2.1.0"
     webidl-conversions "^6.1.0"
+<<<<<<< HEAD
+=======
+>>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> 084dcfd2594a8beed11c4d564977a9502c3a9570
 
 which@^1.2.9, which@^1.3.1:
   version "1.3.1"
@@ -8065,7 +8234,7 @@ word-wrap@~1.2.3:
 
 wordwrap@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"
