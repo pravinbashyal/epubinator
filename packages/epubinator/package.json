@@ -25,7 +25,8 @@
     "release:graduate": "lerna publish --conventional-commits --conventional-graduate --yes --preid=alpha",
     "release": "lerna publish --conventional-commits --yes --preid=alpha",
     "test": "node ../../node_modules/jest/bin/jest.js",
-    "test:coverage": "node ../../node_modules/jest/bin/jest.js --coverage"
+    "test:coverage": "node ../../node_modules/jest/bin/jest.js --coverage",
+    "doctoc": "doctoc"
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
