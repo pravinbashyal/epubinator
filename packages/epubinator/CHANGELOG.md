@@ -3,6 +3,318 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.113](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.112...epubinator@0.0.113) (2021-10-26)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.112](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.111...epubinator@0.0.112) (2021-10-26)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.111](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.110...epubinator@0.0.111) (2021-10-20)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.110](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.109...epubinator@0.0.110) (2021-10-18)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.109](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.108...epubinator@0.0.109) (2021-10-15)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.108](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.107...epubinator@0.0.108) (2021-10-13)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.107](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.106...epubinator@0.0.107) (2021-10-11)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.106](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.105...epubinator@0.0.106) (2021-09-30)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.105](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.104...epubinator@0.0.105) (2021-09-30)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.104](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.103...epubinator@0.0.104) (2021-09-29)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.103](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.102...epubinator@0.0.103) (2021-09-27)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.102](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.101...epubinator@0.0.102) (2021-09-27)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.101](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.100...epubinator@0.0.101) (2021-09-21)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.100](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.99...epubinator@0.0.100) (2021-09-17)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.99](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.98...epubinator@0.0.99) (2021-09-14)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.98](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.97...epubinator@0.0.98) (2021-09-13)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.97](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.96...epubinator@0.0.97) (2021-09-10)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.96](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.95...epubinator@0.0.96) (2021-09-09)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.95](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.94...epubinator@0.0.95) (2021-09-09)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.94](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.93...epubinator@0.0.94) (2021-09-06)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.93](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.92...epubinator@0.0.93) (2021-09-01)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.92](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.91...epubinator@0.0.92) (2021-08-31)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.91](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.90...epubinator@0.0.91) (2021-08-30)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.90](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.89...epubinator@0.0.90) (2021-08-27)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.89](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.88...epubinator@0.0.89) (2021-08-18)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.88](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.87...epubinator@0.0.88) (2021-08-16)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.87](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.86...epubinator@0.0.87) (2021-08-13)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.86](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.85...epubinator@0.0.86) (2021-08-11)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.85](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.84...epubinator@0.0.85) (2021-08-11)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.84](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.83...epubinator@0.0.84) (2021-08-04)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.83](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.82...epubinator@0.0.83) (2021-08-02)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.82](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.81...epubinator@0.0.82) (2021-07-23)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.81](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.80...epubinator@0.0.81) (2021-07-22)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.80](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.79...epubinator@0.0.80) (2021-07-09)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.79](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.78...epubinator@0.0.79) (2021-07-08)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.78](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.77...epubinator@0.0.78) (2021-07-07)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.77](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.76...epubinator@0.0.77) (2021-07-07)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.76](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.75...epubinator@0.0.76) (2021-07-07)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
+## [0.0.75](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.74...epubinator@0.0.75) (2021-07-04)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
 ## [0.0.74](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.73...epubinator@0.0.74) (2021-07-02)
 
 **Note:** Version bump only for package epubinator

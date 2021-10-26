@@ -13,6 +13,20 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f4569c914c8b46db0964/maintainability)](https://codeclimate.com/github/pravinbashyal/epubinator/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/f4569c914c8b46db0964/test_coverage)](https://codeclimate.com/github/pravinbashyal/epubinator/test_coverage)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+## Table of Contents
+
+- [epubinator](#epubinator)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+- [Options](#options)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Installation
 
 ```
@@ -42,6 +56,7 @@ $ epubinator  \
 
 $ epubunator [-v|--version]
 ```
+
 ![example of downloading https://courses.dcs.wisc.edu/wp/readinggerman/introduction/](https://files.slack.com/files-pri/T0D02RHL6-F01HCHD0FJT/output.gif?pub_secret=d32cb6190a)
 
 # Options
