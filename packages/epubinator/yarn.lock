@@ -1649,10 +1649,16 @@
   version "16.2.10"
   resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.10.tgz#c05ea94682d035943ae2453b79d56178496b6653"
 =======
+<<<<<<< HEAD
+"@types/jsdom@^16.2.10":
+  version "16.2.10"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.10.tgz#c05ea94682d035943ae2453b79d56178496b6653"
+=======
 "@types/jsdom@^16.2.11":
   version "16.2.11"
   resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-16.2.11.tgz#e18bd29e0678bb9a16ee74d3c0fb9788e8a4286b"
 >>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
   dependencies:
     "@types/node" "*"
     "@types/parse5" "*"
@@ -1762,10 +1768,16 @@ acorn@^8.1.0:
   version "8.2.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
 =======
+<<<<<<< HEAD
+acorn@^8.1.0:
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
+=======
 acorn@^8.2.4:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.0.tgz#af53266e698d7cffa416714b503066a82221be60"
 >>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -5152,6 +5164,11 @@ jsdom@^16.4.0:
 jsdom@^16.5.3:
   version "16.5.3"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.5.3.tgz#13a755b3950eb938b4482c407238ddf16f0d2136"
+<<<<<<< HEAD
+  dependencies:
+    abab "^2.0.5"
+    acorn "^8.1.0"
+=======
   dependencies:
     abab "^2.0.5"
     acorn "^8.1.0"
@@ -5163,6 +5180,7 @@ jsdom@^16.6.0:
     abab "^2.0.5"
     acorn "^8.2.4"
 >>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
     acorn-globals "^6.0.0"
     cssom "^0.4.4"
     cssstyle "^2.3.0"
@@ -5187,6 +5205,9 @@ jsdom@^16.6.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.5.0"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
     ws "^7.4.4"
 =======
     ws "^7.4.5"
@@ -5476,13 +5497,13 @@ lodash.union@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmjs.org/lodash.union/-/lodash.union-4.6.0.tgz"
 
+<<<<<<< HEAD
+lodash@4.x, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.5.1, lodash@^4.7.0:
+=======
 lodash@4.x, lodash@^4.7.0:
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.5.1:
-  version "4.17.20"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -7779,10 +7800,16 @@ ts-jest@^26.5.6:
   version "26.5.6"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
 =======
+<<<<<<< HEAD
+ts-jest@^26.5.6:
+  version "26.5.6"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
+=======
 ts-jest@^27.0.3:
   version "27.0.3"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.0.3.tgz#808492f022296cde19390bb6ad627c8126bf93f8"
 >>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
@@ -7862,10 +7889,16 @@ typescript@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
 =======
+<<<<<<< HEAD
+typescript@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+=======
 typescript@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.4.tgz#3f85b986945bcf31071decdd96cf8bfa65f9dcbc"
 >>>>>>> 9b6693fc04c818664e1b8025571bff9fc416b605
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
 
 uglify-js@^3.1.4:
   version "3.13.5"
@@ -8089,6 +8122,9 @@ whatwg-url@^8.0.0, whatwg-url@^8.4.0:
 
 whatwg-url@^8.5.0:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> de04adfe6b5fcac1aefc09919ff3818233a0f984
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.5.0.tgz#7752b8464fc0903fec89aa9846fc9efe07351fd3"
   dependencies:
