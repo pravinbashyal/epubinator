@@ -5,7 +5,11 @@
     "example"
   ],
   "scripts": {
-    "build": "cd packages/epubinator && yarn build"
+    "build": "cd packages/epubinator && yarn build",
+    "doctoc": "doctoc"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "doctoc": "^2.1.0"
+  }
 }
