@@ -1,6 +1,6 @@
 {
   "name": "epubinator",
-  "version": "0.0.155",
+  "version": "0.0.156",
   "main": "./build/index.js",
   "author": "Pravin Bashyal <pravin.bashyal@gmail.com>",
   "description": "NPM package to generate epub files out of url",
