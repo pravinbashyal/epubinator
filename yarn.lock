@@ -1640,16 +1640,6 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/fixpack@^2.3.0", "@oclif/fixpack@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@oclif/fixpack/-/fixpack-2.3.1.tgz#6ecee36fd4945b2e3aef604f0b0de466e396a26c"
-  integrity sha512-ynDtqYke7WBjyAK5KQiOoNm2XGm4wBfNDzjbpq3k4NEarA5wRW0PMjdP2FkTAJE2NI3tA6I7DXxxqBzwyt+fBg==
-  dependencies:
-    alce "1.2.0"
-    colors "1.4.0"
-    extend-object "^1.0.0"
-    rc "^1.2.8"
-
 "@oclif/linewrap@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@oclif/linewrap/-/linewrap-1.0.0.tgz"
@@ -2118,14 +2108,6 @@ ajv@^6.12.3:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
-
-alce@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/alce/-/alce-1.2.0.tgz"
-  integrity sha1-qL4trKrEJJRhLxjcCdtpHz3qSqs=
-  dependencies:
-    esprima "^1.2.0"
-    estraverse "^1.5.0"
 
 anchor-markdown-header@~0.5.7:
   version "0.5.7"
@@ -3084,11 +3066,6 @@ colors@1.0.3:
   resolved "https://registry.npmjs.org/colors/-/colors-1.0.3.tgz"
   integrity sha1-BDP0TYCWgP3rYO0mDxsMJi6CpAs=
 
-colors@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/colors/-/colors-1.4.0.tgz"
-  integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
-
 columnify@^1.5.4:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/columnify/-/columnify-1.5.4.tgz"
@@ -4044,20 +4021,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-esprima@^1.2.0:
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/esprima/-/esprima-1.2.5.tgz"
-  integrity sha1-CZNQL+r2aBODJXVvMPmlH+7sEek=
-
 esprima@^4.0.0, esprima@^4.0.1, esprima@~4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz"
   integrity sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
-
-estraverse@^1.5.0:
-  version "1.9.3"
-  resolved "https://registry.npmjs.org/estraverse/-/estraverse-1.9.3.tgz"
-  integrity sha1-r2fy3JIlgkFZUJJgkaQAXSnJu0Q=
 
 estraverse@^5.2.0:
   version "5.2.0"
@@ -4144,11 +4111,6 @@ expect@^27.4.6:
     jest-get-type "^27.4.0"
     jest-matcher-utils "^27.4.6"
     jest-message-util "^27.4.6"
-
-extend-object@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/extend-object/-/extend-object-1.0.0.tgz"
-  integrity sha1-QlFPhAFdE1bK9Rh5ad+yvBvaCCM=
 
 extend-shallow@^2.0.1:
   version "2.0.1"
@@ -5241,7 +5203,7 @@ inherits@2, inherits@^2.0.0, inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, 
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-ini@^1.3.2, ini@^1.3.4, ini@~1.3.0:
+ini@^1.3.2, ini@^1.3.4:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
@@ -7441,13 +7403,12 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-oclif@^2.1.1, oclif@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.1.5.tgz#beef802a1a3363d7f2a5a6dd551e171c14135420"
-  integrity sha512-5KGqkFcTEHOa+H5ERIcLXzr8jA2IaMP3E2KBCel4lryMf+fctztMYuwgr4h4H5BGlRpZfk9gv9iGM5J4tUxKlw==
+oclif@^2.1.1, oclif@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.1.7.tgz#821001dff09f3d1184a0ec25639286746a471b00"
+  integrity sha512-/LsyAdNYIaNwAf5iHjJO3B/XApYWi/qWkIIwvMkWepMD9WrK0GfM6cjx+BW13dAFVNINAB+ygjkRxagDNXhaLQ==
   dependencies:
     "@oclif/core" "^1.0.11"
-    "@oclif/fixpack" "^2.3.1"
     "@oclif/plugin-help" "^5.1.10"
     "@oclif/plugin-not-found" "^2.2.3"
     "@oclif/plugin-warn-if-update-available" "^2.0.3"
@@ -7463,7 +7424,6 @@ oclif@^2.1.1, oclif@^2.1.5:
     oclif "^2.1.1"
     qqjs "^0.3.10"
     semver "^7.3.5"
-    sort-pjson "^1.0.3"
     tslib "^2.3.1"
     yeoman-environment "^2.3.4"
     yeoman-generator "3"
@@ -8075,16 +8035,6 @@ ramda@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.2.tgz#84463226f7f36dc33592f6f4ed6374c48306c3f1"
   integrity sha512-SbiLPU40JuJniHexQSAgad32hfwd+DRUdwF2PlVuI5RZD0/vahUco7R8vD86J/tcEKKF9vZrUVwgtmGCqlCKyA==
-
-rc@^1.2.8:
-  version "1.2.8"
-  resolved "https://registry.npmjs.org/rc/-/rc-1.2.8.tgz"
-  integrity sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
-  dependencies:
-    deep-extend "^0.6.0"
-    ini "~1.3.0"
-    minimist "^1.2.0"
-    strip-json-comments "~2.0.1"
 
 react-is@^17.0.1:
   version "17.0.1"
@@ -8715,13 +8665,6 @@ sort-keys@^4.0.0:
   dependencies:
     is-plain-obj "^2.0.0"
 
-sort-pjson@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/sort-pjson/-/sort-pjson-1.0.3.tgz"
-  integrity sha512-h/xRX+8zuV9tbnbkRwmdNNyyJbjzVTh8YFpMgEgGU2umFDFg2EDfWKtA5YOfnBwT4YoZfJf6hrc0yuXLUvUDFA==
-  dependencies:
-    "@oclif/fixpack" "^2.3.0"
-
 source-map-resolve@^0.5.0:
   version "0.5.3"
   resolved "https://registry.npmjs.org/source-map-resolve/-/source-map-resolve-0.5.3.tgz"
@@ -9021,11 +8964,6 @@ strip-indent@^3.0.0:
   integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
   dependencies:
     min-indent "^1.0.0"
-
-strip-json-comments@~2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
-  integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
 strong-log-transformer@^2.1.0:
   version "2.1.0"
