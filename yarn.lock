@@ -7124,10 +7124,10 @@ object.getownpropertydescriptors@^2.0.3:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.1"
 
-oclif@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.4.0.tgz#dedb0ad2d8392cdaaef29fbab6a694dd00390d9e"
-  integrity sha512-nX00M5LQTpfWfTUWJ/biF0M0Shu0Jk7XzG6+kBx+1F+G2UJqtZLcnkni/KjcSE0v614KT7ndBLjdiEOH2gxNdw==
+oclif@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.4.1.tgz#1efc4bac5b9575488fd13b349f735b5eff77a4b8"
+  integrity sha512-w4M6fkyWDX/nri0C/UMToh/3p+Gu7Lj9NbkeO+dda3oTf1JGsw4q8JUjS5zv+4gM7de4xaJlC1nHfMbbpTcSiw==
   dependencies:
     "@oclif/core" "^1.2.0"
     "@oclif/plugin-help" "^5.1.10"
