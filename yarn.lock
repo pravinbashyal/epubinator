@@ -6958,10 +6958,10 @@ object.getownpropertydescriptors@^2.0.3:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.1"
 
-oclif@^2.4.4:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.4.4.tgz#eef87277c97e268f0588e7076feae69a9a5888a9"
-  integrity sha512-jswxDO7lgsTjLhegRHgBhPSp4/ohsnjZaRcdZ/mTirBFrcOx9T7Dxq9YastbpS4qbfWfaQbYXrX6UdFSkOmS+Q==
+oclif@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.4.5.tgz#37b4ac1046d42e0c8d3c9c39a438c049876834db"
+  integrity sha512-hYSo62ADZccoxKoY1P6sJzpLmy+nUDYmrV3VQ7lUssn1Fw2WyoXd4AXCm6/B7Ma0Pp6pYRh/bgPzNxCcZlZIUw==
   dependencies:
     "@oclif/core" "^1.3.0"
     "@oclif/plugin-help" "^5.1.11"
