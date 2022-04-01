@@ -1729,10 +1729,10 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/core@^1.0.8", "@oclif/core@^1.2.0", "@oclif/core@^1.2.1", "@oclif/core@^1.6.1":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.6.3.tgz#3d1dd4e033f5512ac35963a73878257142390838"
-  integrity sha512-a3DrPNlOYemwnzxuJ3tINjqpMVIYe56Mg+XaQo0nGsqGSk69wF5Q/hD8plsWrtwdkeIxwxhgl7T699EJypAUwg==
+"@oclif/core@^1.0.8", "@oclif/core@^1.2.0", "@oclif/core@^1.2.1", "@oclif/core@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.6.4.tgz#fd213265199a8ef93adb358e15a04d74927eb522"
+  integrity sha512-eUnh03MWxs3PHQUdZbo43ceLqmeOgGegsfimeqd6xfhcKwSv8dqarRyAoMCjg7P6Qm5qCjaNFZ6eS4ao349xvQ==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     "@oclif/screen" "^3.0.2"
@@ -6933,12 +6933,12 @@ object.getownpropertydescriptors@^2.0.3:
     define-properties "^1.1.3"
     es-abstract "^1.18.0-next.1"
 
-oclif@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.6.1.tgz#393325a75638c5a9bf710e8d59022bd514130b4b"
-  integrity sha512-6yWPtMSi7SIqgSRaLTcaI3P6Q7cDprETw/K85MIeFw6GZXaf+Fva/J2YdTXPgnEPqZ450AYHyulwdPISqiDCnA==
+oclif@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-2.6.3.tgz#77295d8342a41bfebcf13f7eba260d26ff5d92ef"
+  integrity sha512-t3w1GnDrZ9GnlO2WxdTRIlb5EmfLo7fkcpKo95q+03HoL4GVUNneraVymyUTYEBsvMyWcX8PbVkcMai/HhBydA==
   dependencies:
-    "@oclif/core" "^1.6.1"
+    "@oclif/core" "^1.6.4"
     "@oclif/plugin-help" "^5.1.11"
     "@oclif/plugin-not-found" "^2.3.1"
     "@oclif/plugin-warn-if-update-available" "^2.0.4"
