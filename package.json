@@ -10,6 +10,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "doctoc": "^2.1.0"
+    "doctoc": "^2.2.0"
   }
 }
