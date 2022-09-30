@@ -2823,10 +2823,10 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/core@^1.0.8", "@oclif/core@^1.16.1", "@oclif/core@^1.2.1", "@oclif/core@^1.3.6":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.16.1.tgz#39663c903f859f8e37b375d7466b92b4394e1c8d"
-  integrity sha512-MfzgqcWzWymndd934pd52JAwy0RIgWWYnC0Ed7bxUVYWF4HFb3KmsE7x9/QBP9392Q14vxXi2GNLHboM/5vaDA==
+"@oclif/core@^1.16.4", "@oclif/core@^1.2.1":
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.16.4.tgz#fafa338ada0624d7f1adac036302b05a37cd96d0"
+  integrity sha512-l+xHtVMteJWeTZZ+f2yLyNjf69X0mhAH8GILXnmoAGAemXbc1DVstvloxOouarvm9xyHHhquzO1Qg5l6xa1VIw==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     "@oclif/screen" "^3.0.2"
@@ -2862,12 +2862,12 @@
   resolved "https://registry.npmjs.org/@oclif/linewrap/-/linewrap-1.0.0.tgz"
   integrity sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==
 
-"@oclif/plugin-help@^5.1.12":
-  version "5.1.12"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-5.1.12.tgz#24a18631eb9b22cb55e1a3b8e4f6039fd42727e6"
-  integrity sha512-HvH/RubJxqCinP0vUWQLTOboT+SfjfL8h40s+PymkWaldIcXlpoRaJX50vz+SjZIs7uewZwEk8fzLqpF/BWXlg==
+"@oclif/plugin-help@^5.1.14":
+  version "5.1.14"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-5.1.14.tgz#641e6f2c7effb4a21573d50c649af662a919bcf9"
+  integrity sha512-jhpD0a2bEp3YW93sQcUM3b15DH+svQqC9pMXNp1m1VyAPoskdaELgt5P/5SjmNuFwqws8scxpbYKlr2/lvvkGQ==
   dependencies:
-    "@oclif/core" "^1.3.6"
+    "@oclif/core" "^1.16.4"
 
 "@oclif/plugin-not-found@^2.3.1":
   version "2.3.1"
@@ -2879,12 +2879,12 @@
     fast-levenshtein "^3.0.0"
     lodash "^4.17.21"
 
-"@oclif/plugin-warn-if-update-available@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-warn-if-update-available/-/plugin-warn-if-update-available-2.0.4.tgz#3d509ca2394cccf65e6622be812d7be4065a60aa"
-  integrity sha512-9dprC1CWPjesg0Vf/rDSQH2tzJXhP1ow84cb2My1kj6e6ESulPKpctiCFSZ1WaCQFfq+crKhzlNoP/vRaXNUAg==
+"@oclif/plugin-warn-if-update-available@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-warn-if-update-available/-/plugin-warn-if-update-available-2.0.6.tgz#fed51d198ba5d621a05690f4639ef988c65245e0"
+  integrity sha512-9PSerV/jz3Mq5P8+bfLhr4UrTNOLmhUo8tGsv/CzJ0c/QffjYONZ8pCNsrVDO+wWzzuYHedXPZjDpOCmMcTTag==
   dependencies:
-    "@oclif/core" "^1.0.8"
+    "@oclif/core" "^1.16.4"
     chalk "^4.1.0"
     debug "^4.1.0"
     fs-extra "^9.0.1"
@@ -4574,19 +4574,20 @@ concat-stream@^2.0.0:
     readable-stream "^3.0.2"
     typedarray "^0.0.6"
 
-concurrently@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-7.0.0.tgz#78d31b441cec338dab03316c221a2f9a67c529b0"
-  integrity sha512-WKM7PUsI8wyXpF80H+zjHP32fsgsHNQfPLw/e70Z5dYkV7hF+rf8q3D+ScWJIEr57CpkO3OWBko6hwhQLPR8Pw==
+concurrently@^7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-7.4.0.tgz#bb0e344964bc172673577c420db21e963f2f7368"
+  integrity sha512-M6AfrueDt/GEna/Vg9BqQ+93yuvzkSKmoTixnwEJkH0LlcGrRC2eCmjeG1tLLHIYfpYJABokqSGyMcXjm96AFA==
   dependencies:
     chalk "^4.1.0"
-    date-fns "^2.16.1"
+    date-fns "^2.29.1"
     lodash "^4.17.21"
-    rxjs "^6.6.3"
+    rxjs "^7.0.0"
+    shell-quote "^1.7.3"
     spawn-command "^0.0.2-1"
     supports-color "^8.1.0"
     tree-kill "^1.2.2"
-    yargs "^16.2.0"
+    yargs "^17.3.1"
 
 config-chain@^1.1.12:
   version "1.1.12"
@@ -4868,10 +4869,10 @@ data-urls@^3.0.1:
     whatwg-mimetype "^3.0.0"
     whatwg-url "^10.0.0"
 
-date-fns@^2.16.1:
-  version "2.28.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
-  integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
+date-fns@^2.29.1:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 dateformat@^3.0.0:
   version "3.0.3"
@@ -9007,17 +9008,17 @@ object-treeify@^1.1.33:
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.33.tgz#f06fece986830a3cba78ddd32d4c11d1f76cdf40"
   integrity sha512-EFVjAYfzWqWsBMRHPMAXLCDIJnpMhdWAqR7xG6M6a2cs6PMFpl/+Z20w9zDW4vkxOFfddegBKq9Rehd0bxWE7A==
 
-oclif@^3.2.6:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.6.tgz#7add880a5086003f0840f312f3c861792f79debb"
-  integrity sha512-RH+hyFoU5TKvVGFMSIWxgK5A+DBFSUyoaFmbi/LqjR+7MADH8OFgc/iMKF4B0Ja332Tip1FiHRPRrVq4AqLB+w==
+oclif@^3.2.10:
+  version "3.2.10"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.10.tgz#8e3d8f068bbab3f326e466facd00f5ecd0ec16cf"
+  integrity sha512-hnvgVu71zB+MMXtbp22qisEgEA6vDEDBZqKH89W8UjiZbNCF7Iv4eAfpWFIs/5aTv8GCCSacQa3w6iXte15lKA==
   dependencies:
-    "@oclif/core" "^1.16.1"
-    "@oclif/plugin-help" "^5.1.12"
+    "@oclif/core" "^1.16.4"
+    "@oclif/plugin-help" "^5.1.14"
     "@oclif/plugin-not-found" "^2.3.1"
-    "@oclif/plugin-warn-if-update-available" "^2.0.4"
+    "@oclif/plugin-warn-if-update-available" "^2.0.6"
     aws-sdk "^2.1116.0"
-    concurrently "^7.0.0"
+    concurrently "^7.4.0"
     debug "^4.3.3"
     find-yarn-workspace-root "^2.0.0"
     fs-extra "^8.1"
@@ -10051,12 +10052,12 @@ rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.6.3:
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
-  integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
+rxjs@^7.0.0:
+  version "7.5.7"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
+  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.1.0"
 
 rxjs@^7.2.0:
   version "7.5.2"
@@ -10161,6 +10162,11 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+shell-quote@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
+  integrity sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==
 
 shelljs@^0.8.3, shelljs@^0.8.5:
   version "0.8.5"
