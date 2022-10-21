@@ -9263,10 +9263,10 @@ object.assign@^4.1.4:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-oclif@^3.2.19:
-  version "3.2.19"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.19.tgz#a2d2c412e21f627172b84e789b8587d416b86329"
-  integrity sha512-LnJpX+YmUdFIAr86oT/++LTh9DhzAu40BhAR+dQ4H4wbOJtDylRgMnH8pAnr+Nw7DZuWe5tKTua9u1H63gEGtg==
+oclif@^3.2.20:
+  version "3.2.20"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.20.tgz#38d7a224a35dbca3518622eb906772789005ff1b"
+  integrity sha512-iO+XWvwHVIgJc9WKotMt08cHU5bYjrm2mXPMZCw7/XWjWJhKWbJFcGgYIFUEjgXqUfzx1olZv35pig5Tfe3g7Q==
   dependencies:
     "@oclif/core" "^1.18.0"
     "@oclif/plugin-help" "^5.1.15"
