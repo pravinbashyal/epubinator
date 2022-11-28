@@ -2823,7 +2823,7 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/core@^1.19.1", "@oclif/core@^1.20.3", "@oclif/core@^1.20.4":
+"@oclif/core@^1.20.3", "@oclif/core@^1.20.4":
   version "1.20.4"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.20.4.tgz#7378b52e1f1b502e383ffb07f95dffc9fd8588ff"
   integrity sha512-giug32M4YhSYNYKQwE1L57/+k5gp1+Bq3/0vKNQmzAY1tizFGhvBJc6GIRZasHjU+xtZLutQvrVrJo7chX3hxg==
@@ -2862,12 +2862,12 @@
   resolved "https://registry.npmjs.org/@oclif/linewrap/-/linewrap-1.0.0.tgz"
   integrity sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==
 
-"@oclif/plugin-help@^5.1.16":
-  version "5.1.16"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-5.1.16.tgz#b55376e50007ba6b73819b11d02232288203fb70"
-  integrity sha512-30uy/bRUzptI4mFf6re1imTBxJJB2r9pQyZ7sbr8zn0oymLZX4dMArlMDi/LwpPqEtIN3fivXgDkjcoKO8ezGQ==
+"@oclif/plugin-help@^5.1.19":
+  version "5.1.19"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-5.1.19.tgz#43051772fefafe9bfe8823e2298103feb351b9c7"
+  integrity sha512-eQVRCFJOwRj8Tbqz8Lzd9GN38egwLCg+ohJ0xfg12CoXml03WqkfcFiAWkVwSWmLVrZUlUVrxfXKKkmpUaXZHg==
   dependencies:
-    "@oclif/core" "^1.19.1"
+    "@oclif/core" "^1.20.4"
 
 "@oclif/plugin-not-found@^2.3.7":
   version "2.3.8"
@@ -6028,10 +6028,10 @@ gitconfiglocal@^1.0.0:
   dependencies:
     ini "^1.3.2"
 
-github-slugger@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.4.0.tgz#206eb96cdb22ee56fdc53a28d5a302338463444e"
-  integrity sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==
+github-slugger@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.5.0.tgz#17891bbc73232051474d68bd867a34625c955f7d"
+  integrity sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==
 
 github-username@^6.0.0:
   version "6.0.0"
@@ -9268,13 +9268,13 @@ object.assign@^4.1.4:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-oclif@^3.2.28:
-  version "3.2.28"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.28.tgz#a10ea7b4bc08344a46c9fbdee7c6c16fa4d19538"
-  integrity sha512-A5TxuGe5bDiCwxg0JvmhKnvEmdA6rPSeIUdkNOuxgGV696YAafR2ClCG4sku7WzB5anl01/ijtmyhfNegd0vhw==
+oclif@^3.2.31:
+  version "3.2.31"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.2.31.tgz#07d3e3302b7cd2b1ef4e42b9fa6905b1faefd917"
+  integrity sha512-zJ0bDcvsBHOnnmCfNHFQYhkF8CuF80Ly7+6PF0093s3uHO/8u19FQmxQ9GtxcphibYKw35w6/74b2xGh0dfziA==
   dependencies:
     "@oclif/core" "^1.20.4"
-    "@oclif/plugin-help" "^5.1.16"
+    "@oclif/plugin-help" "^5.1.19"
     "@oclif/plugin-not-found" "^2.3.7"
     "@oclif/plugin-warn-if-update-available" "^2.0.14"
     aws-sdk "^2.1231.0"
@@ -9282,7 +9282,7 @@ oclif@^3.2.28:
     debug "^4.3.3"
     find-yarn-workspace-root "^2.0.0"
     fs-extra "^8.1"
-    github-slugger "^1.4.0"
+    github-slugger "^1.5.0"
     lodash "^4.17.21"
     normalize-package-data "^3.0.3"
     qqjs "^0.3.11"
