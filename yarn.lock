@@ -9320,10 +9320,10 @@ object.assign@^4.1.4:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-oclif@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.4.1.tgz#7b337383b50407ef45a1b371216275e2570f15ba"
-  integrity sha512-0MSGbeXRh4wSh5io9flYH3qR2WoLskcK64U/AtGzi2jSqPtv9I59KTk48IiOOZK7+kOUKMPeo7gD/UkDI55kqw==
+oclif@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.4.2.tgz#718d6a52107bdab0ca861cd63acdf73eb049a2bc"
+  integrity sha512-YF7zqHCEWiRvfuXkqyPuQsC4PiEJuXLQWIMXOtdJgOnIKqBh9Sp3e4xFsSal9QheVsCwO5kM3Nhe+G430hk/mA==
   dependencies:
     "@oclif/core" "^1.20.4"
     "@oclif/plugin-help" "^5.1.19"
