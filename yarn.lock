@@ -2857,6 +2857,40 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
+"@oclif/core@^2.0.2-beta.6":
+  version "2.0.2-beta.6"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-2.0.2-beta.6.tgz#d794d53886683f37ab712092ff88741981b2c02f"
+  integrity sha512-g3M/I2VrZaN6Ba8qyn2KggGoxDc2ys88LV/7+cGhxpaK98ZVWlgPCTLNHyY1DiA0KSDTTBhUsPV+Uis5mbHB4g==
+  dependencies:
+    "@types/cli-progress" "^3.11.0"
+    ansi-escapes "^4.3.2"
+    ansi-styles "^4.3.0"
+    cardinal "^2.1.1"
+    chalk "^4.1.2"
+    clean-stack "^3.0.1"
+    cli-progress "^3.10.0"
+    debug "^4.3.4"
+    ejs "^3.1.6"
+    fs-extra "^9.1.0"
+    get-package-type "^0.1.0"
+    globby "^11.1.0"
+    hyperlinker "^1.0.0"
+    indent-string "^4.0.0"
+    is-wsl "^2.2.0"
+    js-yaml "^3.14.1"
+    natural-orderby "^2.0.3"
+    object-treeify "^1.1.33"
+    password-prompt "^1.1.2"
+    semver "^7.3.7"
+    string-width "^4.2.3"
+    strip-ansi "^6.0.1"
+    supports-color "^8.1.1"
+    supports-hyperlinks "^2.2.0"
+    tslib "^2.4.1"
+    widest-line "^3.1.0"
+    wordwrap "^1.0.0"
+    wrap-ansi "^7.0.0"
+
 "@oclif/linewrap@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@oclif/linewrap/-/linewrap-1.0.0.tgz"
@@ -3324,6 +3358,13 @@
   integrity sha512-1zzPV9FDe1I/WHhRkf9SNgqtRJWZqrBWgu7JGveuHmmyR9CnAPCie2N/x+iHrgnpYBIcCJWHBoMRv2TRWktsvw==
   dependencies:
     chalk "*"
+
+"@types/cli-progress@^3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@types/cli-progress/-/cli-progress-3.11.0.tgz#ec79df99b26757c3d1c7170af8422e0fc95eef7e"
+  integrity sha512-XhXhBv1R/q2ahF3BM7qT5HLzJNlIL0wbcGyZVjqOTqAybAnsLisd7gy1UCyIqpL+5Iv6XhlSyzjLCnI2sIdbCg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/expect@^1.20.4":
   version "1.20.4"
@@ -9313,12 +9354,12 @@ object.assign@^4.1.4:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-oclif@^3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.4.3.tgz#8db95c7d1f0c8c82fb3037545f78e65fa7769a4a"
-  integrity sha512-Kg8ezSJvDluazG6eyN+TeoryaFn3i9utKVty2hy6I0FUy6QcPnbl8+MCha4Jwc+x5+pA46Tu0n2cnjUcWqp56w==
+oclif@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-3.5.0.tgz#a23ae420c75596b9cd2d19df372e84a7a65df38a"
+  integrity sha512-1e2/Mm9/QdaLu8J4KWynNRUPNtT4ptNBtFxu2GbezFvPmLw8glxJXCs2czz5x2GEPxc6BBZ9cN7tPKPYKC/iAw==
   dependencies:
-    "@oclif/core" "^1.20.4"
+    "@oclif/core" "^2.0.2-beta.6"
     "@oclif/plugin-help" "^5.1.19"
     "@oclif/plugin-not-found" "^2.3.7"
     "@oclif/plugin-warn-if-update-available" "^2.0.14"
