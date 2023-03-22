@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.305](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.304...epubinator@0.0.305) (2023-03-22)
+
+**Note:** Version bump only for package epubinator
+
+
+
+
+
 ## [0.0.304](https://github.com/pravinbashyal/epubinator/compare/epubinator@0.0.303...epubinator@0.0.304) (2023-03-21)
 
 **Note:** Version bump only for package epubinator
