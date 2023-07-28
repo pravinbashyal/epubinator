@@ -58,7 +58,7 @@
     "@types/ramda": "^0.29.3",
     "getopts": "^2.3.0",
     "jest": "^27.3.1",
-    "jest-cli": "^29.6.1",
+    "jest-cli": "^29.6.2",
     "lerna": "^5.1.7",
     "prettier": "^3.0.0",
     "ts-jest": "^27.0.7",
