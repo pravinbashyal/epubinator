@@ -37,7 +37,7 @@
     "jsdom": "^19.0.0",
     "node-fetch": "^3.3.2",
     "oclif": "^3.4.3",
-    "ramda": "^0.29.1"
+    "ramda": "^0.30.0"
   },
   "prettier": {
     "semi": false,
